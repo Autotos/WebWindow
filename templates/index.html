@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>WebWindow - Web版Ubuntu桌面</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- xterm.js 终端库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ubuntu: {
+                            orange: '#E95420',
+                            purple: '#77216F',
+                            dark: '#2C001E',
+                            light: '#F7F7F7'
+                        },
+                        android: {
+                            green: '#3DDC84',
+                            blue: '#4285F4',
+                            dark: '#121212',
+                            gray: '#1E1E1E'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .window-drag {
+                -webkit-app-region: drag;
+            }
+            .window-no-drag {
+                -webkit-app-region: no-drag;
+            }
+            .scrollbar-hidden::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hidden {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .mobile-grid {
+                grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+                gap: 24px 16px;
+                padding: 16px;
+                width: 100vw;
+                flex-shrink: 0;
+            }
+            .desktop-grid {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+                gap: 12px;
+            }
+            .desktop-swipe-container {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                height: 100%;
+            }
+            .desktop-page {
+                scroll-snap-align: start;
+            }
+            .android-app-open {
+                transform: translateY(0);
+                transition: transform 0.3s ease-out;
+            }
+            .android-status-bar {
+                height: 28px;
+                padding: 0 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body id="webwindow-body" class="overflow-hidden bg-gradient-to-br from-ubuntu-dark to-ubuntu-purple h-screen w-screen">
+    <!-- 安卓状态栏（手机模式显示） -->
+    <div id="android-status-bar" class="hidden android-status-bar bg-black/80 text-white flex items-center justify-between w-full">
+        <span id="android-time" class="font-medium">12:00</span>
+        <div class="flex items-center gap-2">
+            <i class="fa fa-signal"></i>
+            <i class="fa fa-wifi"></i>
+            <i class="fa fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 桌面区域 -->
+    <div id="desktop-container" class="h-[calc(100%-48px)] w-full relative overflow-hidden">
+        <!-- 桌面滑动容器（手机模式用） -->
+        <div id="desktop-swipe" class="h-full w-full desktop-swipe-container scrollbar-hidden">
+            <!-- 桌面第一页 -->
+            <div id="desktop-page-1" class="desktop-page h-full w-full p-4 desktop-grid">
+                <div class="desktop-icon flex flex-col items-center cursor-pointer p-2 rounded hover:bg-white/10 transition-all w-20">
+                    <i class="fa fa-folder text-yellow-400 text-3xl mb-1"></i>
+                    <span class="text-white text-sm text-center bg-black/30 px-2 py-0.5 rounded">主目录</span>
+                </div>
+                <div class="desktop-icon flex flex-col items-center cursor-pointer p-2 rounded hover:bg-white/10 transition-all w-20">
+                    <i class="fa fa-code text-blue-400 text-3xl mb-1"></i>
+                    <span class="text-white text-sm text-center bg-black/30 px-2 py-0.5 rounded">代码编辑器</span>
+                </div>
+                <div class="desktop-icon flex flex-col items-center cursor-pointer p-2 rounded hover:bg-white/10 transition-all w-20">
+                    <i class="fa fa-terminal text-green-400 text-3xl mb-1"></i>
+                    <span class="text-white text-sm text-center bg-black/30 px-2 py-0.5 rounded">终端</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 任务栏/安卓底部导航 -->
+    <div id="taskbar" class="h-12 bg-ubuntu-dark/90 backdrop-blur-sm flex items-center px-2 justify-between border-t border-white/10 z-20">
+        <!-- 安卓返回/主页按钮（手机模式显示） -->
+        <div id="android-nav-buttons" class="hidden items-center gap-6 flex-1 justify-center">
+            <button id="android-back" class="text-white text-2xl">
+                <i class="fa fa-arrow-left"></i>
+            </button>
+            <button id="android-home" class="text-white text-2xl">
+                <i class="fa fa-home"></i>
+            </button>
+            <button id="android-overview" class="text-white text-2xl">
+                <i class="fa fa-th-large"></i>
+            </button>
+        </div>
+
+        <!-- 桌面模式开始菜单 -->
+        <button id="start-btn" class="h-10 w-10 flex items-center justify-center rounded hover:bg-white/10 transition-all">
+            <i class="fa fa-bars text-white text-xl"></i>
+        </button>
+
+        <!-- 打开的应用图标（桌面模式显示） -->
+        <div id="desktop-open-apps" class="flex items-center gap-2 flex-1 px-4">
+            <div class="h-10 w-10 flex items-center justify-center rounded bg-white/10 border-b-2 border-ubuntu-orange">
+                <i class="fa fa-folder text-yellow-400 text-xl"></i>
+            </div>
+        </div>
+
+        <!-- 系统托盘 -->
+        <div class="flex items-center gap-3 text-white text-sm">
+            <button id="mode-toggle" class="h-8 w-8 flex items-center justify-center rounded hover:bg-white/10 transition-all" title="切换手机/桌面模式">
+                <i class="fa fa-mobile text-lg"></i>
+            </button>
+            <span id="time" class="font-medium">12:00</span>
+            <i class="fa fa-volume-up text-lg"></i>
+            <i class="fa fa-wifi text-lg"></i>
+            <i class="fa fa-battery-full text-lg"></i>
+        </div>
+    </div>
+
+    <!-- 窗口容器 -->
+    <div id="window-container" class="absolute inset-0 pointer-events-none z-10">
+        <!-- 窗口会在这里动态生成 -->
+    </div>
+
+    <!-- 引入Monaco Editor -->
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
+    <script src="/static/js/desktop.js"></script>
+</body>
