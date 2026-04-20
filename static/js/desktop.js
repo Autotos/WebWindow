@@ -740,7 +740,7 @@ function createFileManagerWindow(initialPath = "") {
     const win = createWindow('文件管理器', 'fa fa-folder text-yellow-500', content, winWidth, winHeight);
     loadFileList(win, initialPath);
     return win;
-}    windowEl.className = 'absolute bg-white rounded-lg shadow-2xl pointer-events-auto overflow-hidden flex flex-col';
+    windowEl.className = 'absolute bg-white rounded-lg shadow-2xl pointer-events-auto overflow-hidden flex flex-col';
     windowEl.style.width = '800px';
     windowEl.style.height = '500px';
     windowEl.style.left = `${(window.innerWidth - 800) / 2}px`;
