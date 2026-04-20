@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="monaco-editor CDN by jsDelivr - A free, fast, and reliable Open Source CDN for npm and GitHub">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>monaco-editor CDN by jsDelivr - A free, fast, and reliable Open Source CDN</title>
+		<style>
+			body {
+				font: 15px/1.4em Arial, "Helvetica Neue", Helvetica, sans-serif;
+				margin: 0;
+				padding: 20px 20px 30px;
+				background-color: #ffffff;
+			}
+
+			.container {
+				max-width: 960px;
+				margin: 0 auto;
+				padding: 10px 0;
+				background-color: #fff;
+			}
+
+			.header {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+
+			h1 {
+				font-size: 28px;
+				line-height: 38px;
+				margin: 0 0 15px;
+			}
+
+			h2 {
+				font-size: 18px;
+				font-weight: 400;
+				margin: 0;
+			}
+
+			.versions {
+				max-width: 400px;
+				padding: 2px 12px 2px 6px;
+			}
+
+			.description {
+				margin: 10px 0;
+				font-size: 16px;
+				color: #666;
+			}
+
+			.path {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				margin: 15px 0 0;
+				padding: 15px 0 30px;
+				border-top: 1px solid #e5e5e5;
+			}
+
+			.path .versions,
+			.path ol {
+				margin: 15px 0 0;
+			}
+
+			.path ol {
+				padding: 0;
+				list-style: none;
+				font-size: 18px;
+				font-weight: 400;
+			}
+
+			.path ol li {
+				display: inline;
+			}
+
+			.listing {
+				border: 1px solid #dfe3e7;
+				border-radius: 6px;
+				-webkit-box-shadow: 0 5px 10px -5px #dfe3e7;
+				box-shadow: 0 5px 10px -5px #dfe3e7;
+			}
+
+			table {
+				width: 100%;
+				border-spacing: 0;
+			}
+
+			th, td {
+				padding: 8px 20px;
+				border-bottom: 1px solid #dfe3e7;
+			}
+
+			tr:last-child td {
+				border-bottom: 0;
+			}
+
+			.name.level-up {
+				border-bottom: 1px solid #dfe3e7;
+			}
+
+			.name.level-up a {
+				padding-left: 0;
+			}
+
+			.name {
+				width: auto;
+				text-align: left;
+				padding-right: 20px;
+			}
+
+			.name a {
+				color: #17233b;
+				padding-left: 5px;
+				position: relative;
+			}
+
+			.name svg {
+				display: inline-block;
+				margin-bottom: -4px;
+			}
+
+			.size {
+				max-width: 80px;
+				text-align: right;
+				color: #444;
+			}
+
+			th.name, th.size {
+				color: #999;
+				text-transform: uppercase;
+				font-size: 12px;
+				letter-spacing: 1px;
+			}
+
+			a {
+				color: #ff5627;
+				text-decoration: none;
+			}
+
+			a:hover, a:focus {
+				color: #ff5627;
+				text-decoration: underline;
+			}
+
+			.landing {
+				margin-top: 30px;
+				text-align: center;
+			}
+
+			.landing p {
+				margin: 0 0 15px;
+			}
+
+			.landing a {
+				display: block;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			footer {
+				max-width: 960px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				margin: 0 auto;
+				padding: 20px 0 0 0;
+				text-align: center;
+				font-size: 14px;
+				color: #666;
+				border-top: 1px solid #edf0f2;
+			}
+
+			.footer-left, .footer-right {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+
+			.logo {
+				width: 115px;
+			}
+
+			.copyright {
+				color: #79849a;
+				margin: 0;
+			}
+
+			@media (min-width: 576px) {
+				.footer-left, .footer-right {
+					-ms-flex-pack: distribute;
+					justify-content: space-around;
+					-webkit-box-orient: horizontal;
+					-webkit-box-direction: normal;
+					-ms-flex-direction: row;
+					flex-direction: row;
+				}
+			}
+
+			@media (min-width: 768px) {
+				body {
+					padding-top: 40px;
+				}
+
+				footer {
+					-webkit-box-orient: horizontal;
+					-webkit-box-direction: normal;
+					-ms-flex-direction: row;
+					flex-direction: row;
+					padding-top: 30px;
+				}
+
+				.container {
+					padding-bottom: 20px;
+				}
+
+				.footer-right a:first-child, .logo {
+					margin-right: 20px;
+				}
+
+				.landing {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-align: start;
+					-ms-flex-align: start;
+					align-items: flex-start;
+					-webkit-box-pack: justify;
+					-ms-flex-pack: justify;
+					justify-content: space-between;
+					margin-top: 40px;
+				}
+
+				.landing .right {
+					text-align: right;
+				}
+			}
+
+			.select-css {
+				display: block;
+				padding: 8px 20px 8px 12px;
+				box-sizing: border-box;
+				margin: 0;
+				border: 1px solid #aaa;
+				border-radius: .5em;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				appearance: none;
+				background-color: #fff;
+				background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/icons/caret-down-fill.svg');
+				background-repeat: no-repeat, repeat;
+				background-position: right 8px top 50%, 0 0;
+				background-size: 10px auto, 100%;
+				outline: none;
+			}
+
+			.select-css::-ms-expand {
+				display: none;
+			}
+
+			.select-css:hover {
+				border-color: #888;
+			}
+
+			.select-css option {
+				font-weight: normal;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>monaco-editor CDN files</h1>
+
+				<a class="badge" href="https://www.jsdelivr.com/package/npm/monaco-editor" title="jsDelivr monthly hits">
+					<img alt="jsDelivr monthly hits badge" src="https://data.jsdelivr.com/v1/package/npm/monaco-editor/badge">
+				</a>
+			</div>
+
+
+			<div class="path">
+				<ol itemscope itemtype="https://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+						<a itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+						   itemid="/npm/monaco-editor@0.45.0/"
+						   href="/npm/monaco-editor@0.45.0/" rel="nofollow">
+							<span itemprop="name">monaco-editor@0.45.0</span></a> /
+						<meta itemprop="position" content="0">
+					</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+						<a itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+						   itemid="/npm/monaco-editor@0.45.0/min/"
+						   href="/npm/monaco-editor@0.45.0/min/" rel="nofollow">
+							<span itemprop="name">min</span></a> /
+						<meta itemprop="position" content="1">
+					</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+						<a itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+						   itemid="/npm/monaco-editor@0.45.0/min/vs/"
+						   href="/npm/monaco-editor@0.45.0/min/vs/" rel="nofollow">
+							<span itemprop="name">vs</span></a> /
+						<meta itemprop="position" content="2">
+					</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+						<a itemscope itemtype="https://schema.org/WebPage" itemprop="item"
+						   itemid="/npm/monaco-editor@0.45.0/min/vs/basic-languages/"
+						   href="/npm/monaco-editor@0.45.0/min/vs/basic-languages/" rel="nofollow">
+							<span itemprop="name">basic-languages</span></a> /
+						<meta itemprop="position" content="3">
+					</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+						<span itemprop="name">cpp</span>
+						<meta itemprop="position" content="4">
+					</li>
+				</ol>
+
+				<select class="versions select-css">
+					<option value="monaco-editor@0.56.0-dev-20260211">monaco-editor@0.56.0-dev-20260211</option>
+					<option value="monaco-editor@0.56.0-dev-20260210">monaco-editor@0.56.0-dev-20260210</option>
+					<option value="monaco-editor@0.56.0-dev-20260206">monaco-editor@0.56.0-dev-20260206</option>
+					<option value="monaco-editor@0.56.0-dev-20260205">monaco-editor@0.56.0-dev-20260205</option>
+					<option value="monaco-editor@0.56.0-dev-20260204">monaco-editor@0.56.0-dev-20260204</option>
+					<option value="monaco-editor@0.56.0-dev-20260128">monaco-editor@0.56.0-dev-20260128</option>
+					<option value="monaco-editor@0.56.0-dev-20260127">monaco-editor@0.56.0-dev-20260127</option>
+					<option value="monaco-editor@0.56.0-dev-20260126">monaco-editor@0.56.0-dev-20260126</option>
+					<option value="monaco-editor@0.56.0-dev-20260125">monaco-editor@0.56.0-dev-20260125</option>
+					<option value="monaco-editor@0.56.0-dev-20260124">monaco-editor@0.56.0-dev-20260124</option>
+					<option value="monaco-editor@0.56.0-dev-20260123">monaco-editor@0.56.0-dev-20260123</option>
+					<option value="monaco-editor@0.56.0-dev-20260122">monaco-editor@0.56.0-dev-20260122</option>
+					<option value="monaco-editor@0.56.0-dev-20260121">monaco-editor@0.56.0-dev-20260121</option>
+					<option value="monaco-editor@0.56.0-dev-20260120">monaco-editor@0.56.0-dev-20260120</option>
+					<option value="monaco-editor@0.56.0-dev-20260119">monaco-editor@0.56.0-dev-20260119</option>
+					<option value="monaco-editor@0.56.0-dev-20260118">monaco-editor@0.56.0-dev-20260118</option>
+					<option value="monaco-editor@0.56.0-dev-20260117">monaco-editor@0.56.0-dev-20260117</option>
+					<option value="monaco-editor@0.56.0-dev-20260116">monaco-editor@0.56.0-dev-20260116</option>
+					<option value="monaco-editor@0.56.0-dev-20260113">monaco-editor@0.56.0-dev-20260113</option>
+					<option value="monaco-editor@0.55.1">monaco-editor@0.55.1</option>
+					<option value="monaco-editor@0.55.0">monaco-editor@0.55.0</option>
+					<option value="monaco-editor@0.55.0-rc">monaco-editor@0.55.0-rc</option>
+					<option value="monaco-editor@0.55.0-dev-20251107">monaco-editor@0.55.0-dev-20251107</option>
+					<option value="monaco-editor@0.55.0-dev-20251106">monaco-editor@0.55.0-dev-20251106</option>
+					<option value="monaco-editor@0.55.0-dev-20251105">monaco-editor@0.55.0-dev-20251105</option>
+					<option value="monaco-editor@0.55.0-dev-20251104">monaco-editor@0.55.0-dev-20251104</option>
+					<option value="monaco-editor@0.55.0-dev-20251103">monaco-editor@0.55.0-dev-20251103</option>
+					<option value="monaco-editor@0.55.0-dev-20251102">monaco-editor@0.55.0-dev-20251102</option>
+					<option value="monaco-editor@0.55.0-dev-20251101">monaco-editor@0.55.0-dev-20251101</option>
+					<option value="monaco-editor@0.55.0-dev-20251031">monaco-editor@0.55.0-dev-20251031</option>
+					<option value="monaco-editor@0.55.0-dev-20251030">monaco-editor@0.55.0-dev-20251030</option>
+					<option value="monaco-editor@0.55.0-dev-20251029">monaco-editor@0.55.0-dev-20251029</option>
+					<option value="monaco-editor@0.55.0-dev-20251028">monaco-editor@0.55.0-dev-20251028</option>
+					<option value="monaco-editor@0.55.0-dev-20251027">monaco-editor@0.55.0-dev-20251027</option>
+					<option value="monaco-editor@0.55.0-dev-20251026">monaco-editor@0.55.0-dev-20251026</option>
+					<option value="monaco-editor@0.55.0-dev-20251025">monaco-editor@0.55.0-dev-20251025</option>
+					<option value="monaco-editor@0.55.0-dev-20251024">monaco-editor@0.55.0-dev-20251024</option>
+					<option value="monaco-editor@0.55.0-dev-20251023">monaco-editor@0.55.0-dev-20251023</option>
+					<option value="monaco-editor@0.55.0-dev-20251022">monaco-editor@0.55.0-dev-20251022</option>
+					<option value="monaco-editor@0.55.0-dev-20251021">monaco-editor@0.55.0-dev-20251021</option>
+					<option value="monaco-editor@0.55.0-dev-20251020">monaco-editor@0.55.0-dev-20251020</option>
+					<option value="monaco-editor@0.55.0-dev-20251019">monaco-editor@0.55.0-dev-20251019</option>
+					<option value="monaco-editor@0.55.0-dev-20251018">monaco-editor@0.55.0-dev-20251018</option>
+					<option value="monaco-editor@0.55.0-dev-20251017">monaco-editor@0.55.0-dev-20251017</option>
+					<option value="monaco-editor@0.55.0-dev-20251016">monaco-editor@0.55.0-dev-20251016</option>
+					<option value="monaco-editor@0.55.0-dev-20251015">monaco-editor@0.55.0-dev-20251015</option>
+					<option value="monaco-editor@0.55.0-dev-20251014">monaco-editor@0.55.0-dev-20251014</option>
+					<option value="monaco-editor@0.55.0-dev-20251013">monaco-editor@0.55.0-dev-20251013</option>
+					<option value="monaco-editor@0.55.0-dev-20251012">monaco-editor@0.55.0-dev-20251012</option>
+					<option value="monaco-editor@0.55.0-dev-20251011">monaco-editor@0.55.0-dev-20251011</option>
+					<option value="monaco-editor@0.55.0-dev-20251010.1">monaco-editor@0.55.0-dev-20251010.1</option>
+					<option value="monaco-editor@0.55.0-dev-20251010">monaco-editor@0.55.0-dev-20251010</option>
+					<option value="monaco-editor@0.55.0-dev-20251009">monaco-editor@0.55.0-dev-20251009</option>
+					<option value="monaco-editor@0.55.0-dev-20251008">monaco-editor@0.55.0-dev-20251008</option>
+					<option value="monaco-editor@0.55.0-dev-20251007">monaco-editor@0.55.0-dev-20251007</option>
+					<option value="monaco-editor@0.54.0">monaco-editor@0.54.0</option>
+					<option value="monaco-editor@0.54.0-dev-20251006">monaco-editor@0.54.0-dev-20251006</option>
+					<option value="monaco-editor@0.54.0-dev-20251005">monaco-editor@0.54.0-dev-20251005</option>
+					<option value="monaco-editor@0.54.0-dev-20251004">monaco-editor@0.54.0-dev-20251004</option>
+					<option value="monaco-editor@0.54.0-dev-20251003">monaco-editor@0.54.0-dev-20251003</option>
+					<option value="monaco-editor@0.54.0-dev-20251002">monaco-editor@0.54.0-dev-20251002</option>
+					<option value="monaco-editor@0.54.0-dev-20251001">monaco-editor@0.54.0-dev-20251001</option>
+					<option value="monaco-editor@0.54.0-dev-20250930">monaco-editor@0.54.0-dev-20250930</option>
+					<option value="monaco-editor@0.54.0-dev-20250929">monaco-editor@0.54.0-dev-20250929</option>
+					<option value="monaco-editor@0.54.0-dev-20250928">monaco-editor@0.54.0-dev-20250928</option>
+					<option value="monaco-editor@0.54.0-dev-20250926">monaco-editor@0.54.0-dev-20250926</option>
+					<option value="monaco-editor@0.54.0-dev-20250925">monaco-editor@0.54.0-dev-20250925</option>
+					<option value="monaco-editor@0.54.0-dev-20250924">monaco-editor@0.54.0-dev-20250924</option>
+					<option value="monaco-editor@0.54.0-dev-20250923">monaco-editor@0.54.0-dev-20250923</option>
+					<option value="monaco-editor@0.54.0-dev-20250922">monaco-editor@0.54.0-dev-20250922</option>
+					<option value="monaco-editor@0.54.0-dev-20250919">monaco-editor@0.54.0-dev-20250919</option>
+					<option value="monaco-editor@0.54.0-dev-20250918">monaco-editor@0.54.0-dev-20250918</option>
+					<option value="monaco-editor@0.54.0-dev-20250917">monaco-editor@0.54.0-dev-20250917</option>
+					<option value="monaco-editor@0.54.0-dev-20250916">monaco-editor@0.54.0-dev-20250916</option>
+					<option value="monaco-editor@0.54.0-dev-20250915">monaco-editor@0.54.0-dev-20250915</option>
+					<option value="monaco-editor@0.54.0-dev-20250914">monaco-editor@0.54.0-dev-20250914</option>
+					<option value="monaco-editor@0.54.0-dev-20250913">monaco-editor@0.54.0-dev-20250913</option>
+					<option value="monaco-editor@0.54.0-dev-20250912">monaco-editor@0.54.0-dev-20250912</option>
+					<option value="monaco-editor@0.54.0-dev-20250911">monaco-editor@0.54.0-dev-20250911</option>
+					<option value="monaco-editor@0.54.0-dev-20250910">monaco-editor@0.54.0-dev-20250910</option>
+					<option value="monaco-editor@0.54.0-dev-20250909">monaco-editor@0.54.0-dev-20250909</option>
+					<option value="monaco-editor@0.53.0">monaco-editor@0.53.0</option>
+					<option value="monaco-editor@0.53.0-rc2">monaco-editor@0.53.0-rc2</option>
+					<option value="monaco-editor@0.53.0-dev-20250908">monaco-editor@0.53.0-dev-20250908</option>
+					<option value="monaco-editor@0.53.0-dev-20250907">monaco-editor@0.53.0-dev-20250907</option>
+					<option value="monaco-editor@0.53.0-dev-20250906">monaco-editor@0.53.0-dev-20250906</option>
+					<option value="monaco-editor@0.53.0-dev-20250905">monaco-editor@0.53.0-dev-20250905</option>
+					<option value="monaco-editor@0.53.0-dev-20250904">monaco-editor@0.53.0-dev-20250904</option>
+					<option value="monaco-editor@0.53.0-dev-20250903">monaco-editor@0.53.0-dev-20250903</option>
+					<option value="monaco-editor@0.53.0-dev-20250902">monaco-editor@0.53.0-dev-20250902</option>
+					<option value="monaco-editor@0.53.0-dev-20250901">monaco-editor@0.53.0-dev-20250901</option>
+					<option value="monaco-editor@0.53.0-dev-20250831">monaco-editor@0.53.0-dev-20250831</option>
+					<option value="monaco-editor@0.53.0-dev-20250830">monaco-editor@0.53.0-dev-20250830</option>
+					<option value="monaco-editor@0.53.0-dev-20250829">monaco-editor@0.53.0-dev-20250829</option>
+					<option value="monaco-editor@0.53.0-dev-20250828.2">monaco-editor@0.53.0-dev-20250828.2</option>
+					<option value="monaco-editor@0.53.0-dev-20250828.1">monaco-editor@0.53.0-dev-20250828.1</option>
+					<option value="monaco-editor@0.53.0-dev-20250828">monaco-editor@0.53.0-dev-20250828</option>
+					<option value="monaco-editor@0.52.2">monaco-editor@0.52.2</option>
+					<option value="monaco-editor@0.52.0">monaco-editor@0.52.0</option>
+					<option value="monaco-editor@0.52.0-rc2">monaco-editor@0.52.0-rc2</option>
+					<option value="monaco-editor@0.51.0">monaco-editor@0.51.0</option>
+					<option value="monaco-editor@0.51.0-rc3">monaco-editor@0.51.0-rc3</option>
+					<option value="monaco-editor@0.51.0-rc2">monaco-editor@0.51.0-rc2</option>
+					<option value="monaco-editor@0.51.0-rc">monaco-editor@0.51.0-rc</option>
+					<option value="monaco-editor@0.51.0-dev-20240807">monaco-editor@0.51.0-dev-20240807</option>
+					<option value="monaco-editor@0.51.0-dev-20240806">monaco-editor@0.51.0-dev-20240806</option>
+					<option value="monaco-editor@0.51.0-dev-20240805">monaco-editor@0.51.0-dev-20240805</option>
+					<option value="monaco-editor@0.51.0-dev-20240804">monaco-editor@0.51.0-dev-20240804</option>
+					<option value="monaco-editor@0.51.0-dev-20240803">monaco-editor@0.51.0-dev-20240803</option>
+					<option value="monaco-editor@0.51.0-dev-20240802">monaco-editor@0.51.0-dev-20240802</option>
+					<option value="monaco-editor@0.51.0-dev-20240801">monaco-editor@0.51.0-dev-20240801</option>
+					<option value="monaco-editor@0.51.0-dev-20240731">monaco-editor@0.51.0-dev-20240731</option>
+					<option value="monaco-editor@0.51.0-dev-20240730">monaco-editor@0.51.0-dev-20240730</option>
+					<option value="monaco-editor@0.51.0-dev-20240729">monaco-editor@0.51.0-dev-20240729</option>
+					<option value="monaco-editor@0.51.0-dev-20240728">monaco-editor@0.51.0-dev-20240728</option>
+					<option value="monaco-editor@0.51.0-dev-20240727">monaco-editor@0.51.0-dev-20240727</option>
+					<option value="monaco-editor@0.51.0-dev-20240726-2">monaco-editor@0.51.0-dev-20240726-2</option>
+					<option value="monaco-editor@0.51.0-dev-20240628">monaco-editor@0.51.0-dev-20240628</option>
+					<option value="monaco-editor@0.51.0-dev-20240627">monaco-editor@0.51.0-dev-20240627</option>
+					<option value="monaco-editor@0.51.0-dev-20240626">monaco-editor@0.51.0-dev-20240626</option>
+					<option value="monaco-editor@0.51.0-dev-20240625">monaco-editor@0.51.0-dev-20240625</option>
+					<option value="monaco-editor@0.51.0-dev-20240624">monaco-editor@0.51.0-dev-20240624</option>
+					<option value="monaco-editor@0.51.0-dev-20240623">monaco-editor@0.51.0-dev-20240623</option>
+					<option value="monaco-editor@0.51.0-dev-20240622">monaco-editor@0.51.0-dev-20240622</option>
+					<option value="monaco-editor@0.51.0-dev-20240621">monaco-editor@0.51.0-dev-20240621</option>
+					<option value="monaco-editor@0.50.0">monaco-editor@0.50.0</option>
+					<option value="monaco-editor@0.50.0-rc">monaco-editor@0.50.0-rc</option>
+					<option value="monaco-editor@0.50.0-dev-20240620">monaco-editor@0.50.0-dev-20240620</option>
+					<option value="monaco-editor@0.50.0-dev-20240619">monaco-editor@0.50.0-dev-20240619</option>
+					<option value="monaco-editor@0.50.0-dev-20240618">monaco-editor@0.50.0-dev-20240618</option>
+					<option value="monaco-editor@0.50.0-dev-20240617">monaco-editor@0.50.0-dev-20240617</option>
+					<option value="monaco-editor@0.50.0-dev-20240616">monaco-editor@0.50.0-dev-20240616</option>
+					<option value="monaco-editor@0.50.0-dev-20240615">monaco-editor@0.50.0-dev-20240615</option>
+					<option value="monaco-editor@0.50.0-dev-20240614">monaco-editor@0.50.0-dev-20240614</option>
+					<option value="monaco-editor@0.50.0-dev-20240613">monaco-editor@0.50.0-dev-20240613</option>
+					<option value="monaco-editor@0.50.0-dev-20240612">monaco-editor@0.50.0-dev-20240612</option>
+					<option value="monaco-editor@0.50.0-dev-20240611">monaco-editor@0.50.0-dev-20240611</option>
+					<option value="monaco-editor@0.50.0-dev-20240610">monaco-editor@0.50.0-dev-20240610</option>
+					<option value="monaco-editor@0.50.0-dev-20240609">monaco-editor@0.50.0-dev-20240609</option>
+					<option value="monaco-editor@0.50.0-dev-20240608">monaco-editor@0.50.0-dev-20240608</option>
+					<option value="monaco-editor@0.50.0-dev-20240607">monaco-editor@0.50.0-dev-20240607</option>
+					<option value="monaco-editor@0.50.0-dev-20240606">monaco-editor@0.50.0-dev-20240606</option>
+					<option value="monaco-editor@0.50.0-dev-20240605">monaco-editor@0.50.0-dev-20240605</option>
+					<option value="monaco-editor@0.50.0-dev-20240604">monaco-editor@0.50.0-dev-20240604</option>
+					<option value="monaco-editor@0.50.0-dev-20240603">monaco-editor@0.50.0-dev-20240603</option>
+					<option value="monaco-editor@0.50.0-dev-20240602">monaco-editor@0.50.0-dev-20240602</option>
+					<option value="monaco-editor@0.50.0-dev-20240601">monaco-editor@0.50.0-dev-20240601</option>
+					<option value="monaco-editor@0.50.0-dev-20240531">monaco-editor@0.50.0-dev-20240531</option>
+					<option value="monaco-editor@0.50.0-dev-20240530">monaco-editor@0.50.0-dev-20240530</option>
+					<option value="monaco-editor@0.50.0-dev-20240529">monaco-editor@0.50.0-dev-20240529</option>
+					<option value="monaco-editor@0.50.0-dev-20240528">monaco-editor@0.50.0-dev-20240528</option>
+					<option value="monaco-editor@0.50.0-dev-20240527">monaco-editor@0.50.0-dev-20240527</option>
+					<option value="monaco-editor@0.50.0-dev-20240526">monaco-editor@0.50.0-dev-20240526</option>
+					<option value="monaco-editor@0.50.0-dev-20240525">monaco-editor@0.50.0-dev-20240525</option>
+					<option value="monaco-editor@0.49.0">monaco-editor@0.49.0</option>
+					<option value="monaco-editor@0.49.0-rc">monaco-editor@0.49.0-rc</option>
+					<option value="monaco-editor@0.49.0-dev-20240524">monaco-editor@0.49.0-dev-20240524</option>
+					<option value="monaco-editor@0.49.0-dev-20240523">monaco-editor@0.49.0-dev-20240523</option>
+					<option value="monaco-editor@0.49.0-dev-20240522">monaco-editor@0.49.0-dev-20240522</option>
+					<option value="monaco-editor@0.49.0-dev-20240521">monaco-editor@0.49.0-dev-20240521</option>
+					<option value="monaco-editor@0.49.0-dev-20240520">monaco-editor@0.49.0-dev-20240520</option>
+					<option value="monaco-editor@0.49.0-dev-20240519">monaco-editor@0.49.0-dev-20240519</option>
+					<option value="monaco-editor@0.49.0-dev-20240518">monaco-editor@0.49.0-dev-20240518</option>
+					<option value="monaco-editor@0.49.0-dev-20240517">monaco-editor@0.49.0-dev-20240517</option>
+					<option value="monaco-editor@0.49.0-dev-20240516">monaco-editor@0.49.0-dev-20240516</option>
+					<option value="monaco-editor@0.49.0-dev-20240515">monaco-editor@0.49.0-dev-20240515</option>
+					<option value="monaco-editor@0.49.0-dev-20240510">monaco-editor@0.49.0-dev-20240510</option>
+					<option value="monaco-editor@0.49.0-dev-20240509">monaco-editor@0.49.0-dev-20240509</option>
+					<option value="monaco-editor@0.49.0-dev-20240508">monaco-editor@0.49.0-dev-20240508</option>
+					<option value="monaco-editor@0.49.0-dev-20240507">monaco-editor@0.49.0-dev-20240507</option>
+					<option value="monaco-editor@0.49.0-dev-20240506">monaco-editor@0.49.0-dev-20240506</option>
+					<option value="monaco-editor@0.49.0-dev-20240505">monaco-editor@0.49.0-dev-20240505</option>
+					<option value="monaco-editor@0.49.0-dev-20240504">monaco-editor@0.49.0-dev-20240504</option>
+					<option value="monaco-editor@0.49.0-dev-20240503">monaco-editor@0.49.0-dev-20240503</option>
+					<option value="monaco-editor@0.49.0-dev-20240502">monaco-editor@0.49.0-dev-20240502</option>
+					<option value="monaco-editor@0.49.0-dev-20240501">monaco-editor@0.49.0-dev-20240501</option>
+					<option value="monaco-editor@0.49.0-dev-20240430">monaco-editor@0.49.0-dev-20240430</option>
+					<option value="monaco-editor@0.49.0-dev-20240429">monaco-editor@0.49.0-dev-20240429</option>
+					<option value="monaco-editor@0.49.0-dev-20240428">monaco-editor@0.49.0-dev-20240428</option>
+					<option value="monaco-editor@0.49.0-dev-20240427">monaco-editor@0.49.0-dev-20240427</option>
+					<option value="monaco-editor@0.49.0-dev-20240426">monaco-editor@0.49.0-dev-20240426</option>
+					<option value="monaco-editor@0.49.0-dev-20240425">monaco-editor@0.49.0-dev-20240425</option>
+					<option value="monaco-editor@0.49.0-dev-20240424">monaco-editor@0.49.0-dev-20240424</option>
+					<option value="monaco-editor@0.49.0-dev-20240423">monaco-editor@0.49.0-dev-20240423</option>
+					<option value="monaco-editor@0.48.0">monaco-editor@0.48.0</option>
+					<option value="monaco-editor@0.48.0-rc">monaco-editor@0.48.0-rc</option>
+					<option value="monaco-editor@0.48.0-dev-20240421">monaco-editor@0.48.0-dev-20240421</option>
+					<option value="monaco-editor@0.48.0-dev-20240420">monaco-editor@0.48.0-dev-20240420</option>
+					<option value="monaco-editor@0.48.0-dev-20240418">monaco-editor@0.48.0-dev-20240418</option>
+					<option value="monaco-editor@0.48.0-dev-20240417">monaco-editor@0.48.0-dev-20240417</option>
+					<option value="monaco-editor@0.48.0-dev-20240416">monaco-editor@0.48.0-dev-20240416</option>
+					<option value="monaco-editor@0.48.0-dev-20240415">monaco-editor@0.48.0-dev-20240415</option>
+					<option value="monaco-editor@0.48.0-dev-20240414">monaco-editor@0.48.0-dev-20240414</option>
+					<option value="monaco-editor@0.48.0-dev-20240413">monaco-editor@0.48.0-dev-20240413</option>
+					<option value="monaco-editor@0.48.0-dev-20240412">monaco-editor@0.48.0-dev-20240412</option>
+					<option value="monaco-editor@0.48.0-dev-20240411">monaco-editor@0.48.0-dev-20240411</option>
+					<option value="monaco-editor@0.48.0-dev-20240410">monaco-editor@0.48.0-dev-20240410</option>
+					<option value="monaco-editor@0.48.0-dev-20240409">monaco-editor@0.48.0-dev-20240409</option>
+					<option value="monaco-editor@0.48.0-dev-20240408">monaco-editor@0.48.0-dev-20240408</option>
+					<option value="monaco-editor@0.48.0-dev-20240407">monaco-editor@0.48.0-dev-20240407</option>
+					<option value="monaco-editor@0.48.0-dev-20240406">monaco-editor@0.48.0-dev-20240406</option>
+					<option value="monaco-editor@0.48.0-dev-20240405">monaco-editor@0.48.0-dev-20240405</option>
+					<option value="monaco-editor@0.48.0-dev-20240404">monaco-editor@0.48.0-dev-20240404</option>
+					<option value="monaco-editor@0.48.0-dev-20240403">monaco-editor@0.48.0-dev-20240403</option>
+					<option value="monaco-editor@0.48.0-dev-20240402">monaco-editor@0.48.0-dev-20240402</option>
+					<option value="monaco-editor@0.48.0-dev-20240401">monaco-editor@0.48.0-dev-20240401</option>
+					<option value="monaco-editor@0.48.0-dev-20240331">monaco-editor@0.48.0-dev-20240331</option>
+					<option value="monaco-editor@0.48.0-dev-20240330">monaco-editor@0.48.0-dev-20240330</option>
+					<option value="monaco-editor@0.48.0-dev-20240329">monaco-editor@0.48.0-dev-20240329</option>
+					<option value="monaco-editor@0.48.0-dev-20240328">monaco-editor@0.48.0-dev-20240328</option>
+					<option value="monaco-editor@0.48.0-dev-20240327">monaco-editor@0.48.0-dev-20240327</option>
+					<option value="monaco-editor@0.48.0-dev-20240325">monaco-editor@0.48.0-dev-20240325</option>
+					<option value="monaco-editor@0.48.0-dev-20240324">monaco-editor@0.48.0-dev-20240324</option>
+					<option value="monaco-editor@0.48.0-dev-20240323">monaco-editor@0.48.0-dev-20240323</option>
+					<option value="monaco-editor@0.48.0-dev-20240322">monaco-editor@0.48.0-dev-20240322</option>
+					<option value="monaco-editor@0.48.0-dev-20240321">monaco-editor@0.48.0-dev-20240321</option>
+					<option value="monaco-editor@0.48.0-dev-20240320">monaco-editor@0.48.0-dev-20240320</option>
+					<option value="monaco-editor@0.48.0-dev-20240319">monaco-editor@0.48.0-dev-20240319</option>
+					<option value="monaco-editor@0.47.0">monaco-editor@0.47.0</option>
+					<option value="monaco-editor@0.47.0-rc">monaco-editor@0.47.0-rc</option>
+					<option value="monaco-editor@0.47.0-dev-20240308">monaco-editor@0.47.0-dev-20240308</option>
+					<option value="monaco-editor@0.47.0-dev-20240307">monaco-editor@0.47.0-dev-20240307</option>
+					<option value="monaco-editor@0.47.0-dev-20240306">monaco-editor@0.47.0-dev-20240306</option>
+					<option value="monaco-editor@0.47.0-dev-20240305">monaco-editor@0.47.0-dev-20240305</option>
+					<option value="monaco-editor@0.47.0-dev-20240304">monaco-editor@0.47.0-dev-20240304</option>
+					<option value="monaco-editor@0.47.0-dev-20240303">monaco-editor@0.47.0-dev-20240303</option>
+					<option value="monaco-editor@0.47.0-dev-20240302">monaco-editor@0.47.0-dev-20240302</option>
+					<option value="monaco-editor@0.47.0-dev-20240301">monaco-editor@0.47.0-dev-20240301</option>
+					<option value="monaco-editor@0.47.0-dev-20240229">monaco-editor@0.47.0-dev-20240229</option>
+					<option value="monaco-editor@0.47.0-dev-20240228">monaco-editor@0.47.0-dev-20240228</option>
+					<option value="monaco-editor@0.47.0-dev-20240227">monaco-editor@0.47.0-dev-20240227</option>
+					<option value="monaco-editor@0.47.0-dev-20240225">monaco-editor@0.47.0-dev-20240225</option>
+					<option value="monaco-editor@0.47.0-dev-20240224">monaco-editor@0.47.0-dev-20240224</option>
+					<option value="monaco-editor@0.47.0-dev-20240223">monaco-editor@0.47.0-dev-20240223</option>
+					<option value="monaco-editor@0.47.0-dev-20240222">monaco-editor@0.47.0-dev-20240222</option>
+					<option value="monaco-editor@0.47.0-dev-20240221">monaco-editor@0.47.0-dev-20240221</option>
+					<option value="monaco-editor@0.47.0-dev-20240220">monaco-editor@0.47.0-dev-20240220</option>
+					<option value="monaco-editor@0.47.0-dev-20240219">monaco-editor@0.47.0-dev-20240219</option>
+					<option value="monaco-editor@0.47.0-dev-20240218">monaco-editor@0.47.0-dev-20240218</option>
+					<option value="monaco-editor@0.47.0-dev-20240217">monaco-editor@0.47.0-dev-20240217</option>
+					<option value="monaco-editor@0.47.0-dev-20240216">monaco-editor@0.47.0-dev-20240216</option>
+					<option value="monaco-editor@0.47.0-dev-20240215">monaco-editor@0.47.0-dev-20240215</option>
+					<option value="monaco-editor@0.47.0-dev-20240214">monaco-editor@0.47.0-dev-20240214</option>
+					<option value="monaco-editor@0.47.0-dev-20240213">monaco-editor@0.47.0-dev-20240213</option>
+					<option value="monaco-editor@0.47.0-dev-20240212">monaco-editor@0.47.0-dev-20240212</option>
+					<option value="monaco-editor@0.47.0-dev-20240211">monaco-editor@0.47.0-dev-20240211</option>
+					<option value="monaco-editor@0.47.0-dev-20240210">monaco-editor@0.47.0-dev-20240210</option>
+					<option value="monaco-editor@0.47.0-dev-20240209">monaco-editor@0.47.0-dev-20240209</option>
+					<option value="monaco-editor@0.47.0-dev-20240208">monaco-editor@0.47.0-dev-20240208</option>
+					<option value="monaco-editor@0.46.0">monaco-editor@0.46.0</option>
+					<option value="monaco-editor@0.46.0-rc">monaco-editor@0.46.0-rc</option>
+					<option value="monaco-editor@0.46.0-dev-20240207">monaco-editor@0.46.0-dev-20240207</option>
+					<option value="monaco-editor@0.46.0-dev-20240202">monaco-editor@0.46.0-dev-20240202</option>
+					<option value="monaco-editor@0.46.0-dev-20240201">monaco-editor@0.46.0-dev-20240201</option>
+					<option value="monaco-editor@0.46.0-dev-20240131">monaco-editor@0.46.0-dev-20240131</option>
+					<option value="monaco-editor@0.46.0-dev-20240130">monaco-editor@0.46.0-dev-20240130</option>
+					<option value="monaco-editor@0.46.0-dev-20240129">monaco-editor@0.46.0-dev-20240129</option>
+					<option value="monaco-editor@0.46.0-dev-20240128">monaco-editor@0.46.0-dev-20240128</option>
+					<option value="monaco-editor@0.46.0-dev-20240127">monaco-editor@0.46.0-dev-20240127</option>
+					<option value="monaco-editor@0.46.0-dev-20240126">monaco-editor@0.46.0-dev-20240126</option>
+					<option value="monaco-editor@0.46.0-dev-20240125">monaco-editor@0.46.0-dev-20240125</option>
+					<option value="monaco-editor@0.46.0-dev-20240124">monaco-editor@0.46.0-dev-20240124</option>
+					<option value="monaco-editor@0.46.0-dev-20240123">monaco-editor@0.46.0-dev-20240123</option>
+					<option value="monaco-editor@0.46.0-dev-20240122">monaco-editor@0.46.0-dev-20240122</option>
+					<option value="monaco-editor@0.46.0-dev-20240121">monaco-editor@0.46.0-dev-20240121</option>
+					<option value="monaco-editor@0.46.0-dev-20240120">monaco-editor@0.46.0-dev-20240120</option>
+					<option value="monaco-editor@0.46.0-dev-20240119">monaco-editor@0.46.0-dev-20240119</option>
+					<option value="monaco-editor@0.46.0-dev-20240118">monaco-editor@0.46.0-dev-20240118</option>
+					<option value="monaco-editor@0.46.0-dev-20240117">monaco-editor@0.46.0-dev-20240117</option>
+					<option value="monaco-editor@0.46.0-dev-20240116">monaco-editor@0.46.0-dev-20240116</option>
+					<option value="monaco-editor@0.46.0-dev-20240115">monaco-editor@0.46.0-dev-20240115</option>
+					<option value="monaco-editor@0.46.0-dev-20240114">monaco-editor@0.46.0-dev-20240114</option>
+					<option value="monaco-editor@0.46.0-dev-20240113">monaco-editor@0.46.0-dev-20240113</option>
+					<option value="monaco-editor@0.46.0-dev-20240112">monaco-editor@0.46.0-dev-20240112</option>
+					<option value="monaco-editor@0.46.0-dev-20240111">monaco-editor@0.46.0-dev-20240111</option>
+					<option value="monaco-editor@0.46.0-dev-20240110">monaco-editor@0.46.0-dev-20240110</option>
+					<option value="monaco-editor@0.46.0-dev-20240109">monaco-editor@0.46.0-dev-20240109</option>
+					<option value="monaco-editor@0.46.0-dev-20231214">monaco-editor@0.46.0-dev-20231214</option>
+					<option value="monaco-editor@0.46.0-dev-20231213">monaco-editor@0.46.0-dev-20231213</option>
+					<option value="monaco-editor@0.46.0-dev-20231212">monaco-editor@0.46.0-dev-20231212</option>
+					<option value="monaco-editor@0.46.0-dev-20231211">monaco-editor@0.46.0-dev-20231211</option>
+					<option value="monaco-editor@0.46.0-dev-20231210">monaco-editor@0.46.0-dev-20231210</option>
+					<option value="monaco-editor@0.46.0-dev-20231209">monaco-editor@0.46.0-dev-20231209</option>
+					<option value="monaco-editor@0.46.0-dev-20231208">monaco-editor@0.46.0-dev-20231208</option>
+					<option value="monaco-editor@0.45.0">monaco-editor@0.45.0</option>
+					<option value="monaco-editor@0.45.0-rc">monaco-editor@0.45.0-rc</option>
+					<option value="monaco-editor@0.45.0-dev-20231207">monaco-editor@0.45.0-dev-20231207</option>
+					<option value="monaco-editor@0.45.0-dev-20231206">monaco-editor@0.45.0-dev-20231206</option>
+					<option value="monaco-editor@0.45.0-dev-20231205">monaco-editor@0.45.0-dev-20231205</option>
+					<option value="monaco-editor@0.45.0-dev-20231204">monaco-editor@0.45.0-dev-20231204</option>
+					<option value="monaco-editor@0.45.0-dev-20231203">monaco-editor@0.45.0-dev-20231203</option>
+					<option value="monaco-editor@0.45.0-dev-20231202">monaco-editor@0.45.0-dev-20231202</option>
+					<option value="monaco-editor@0.45.0-dev-20231201">monaco-editor@0.45.0-dev-20231201</option>
+					<option value="monaco-editor@0.45.0-dev-20231130">monaco-editor@0.45.0-dev-20231130</option>
+					<option value="monaco-editor@0.45.0-dev-20231128">monaco-editor@0.45.0-dev-20231128</option>
+					<option value="monaco-editor@0.45.0-dev-20231127">monaco-editor@0.45.0-dev-20231127</option>
+					<option value="monaco-editor@0.45.0-dev-20231126">monaco-editor@0.45.0-dev-20231126</option>
+					<option value="monaco-editor@0.45.0-dev-20231125">monaco-editor@0.45.0-dev-20231125</option>
+					<option value="monaco-editor@0.45.0-dev-20231124">monaco-editor@0.45.0-dev-20231124</option>
+					<option value="monaco-editor@0.45.0-dev-20231123">monaco-editor@0.45.0-dev-20231123</option>
+					<option value="monaco-editor@0.45.0-dev-20231122">monaco-editor@0.45.0-dev-20231122</option>
+					<option value="monaco-editor@0.45.0-dev-20231121">monaco-editor@0.45.0-dev-20231121</option>
+					<option value="monaco-editor@0.45.0-dev-20231120">monaco-editor@0.45.0-dev-20231120</option>
+					<option value="monaco-editor@0.45.0-dev-20231119">monaco-editor@0.45.0-dev-20231119</option>
+					<option value="monaco-editor@0.45.0-dev-20231118">monaco-editor@0.45.0-dev-20231118</option>
+					<option value="monaco-editor@0.45.0-dev-20231117">monaco-editor@0.45.0-dev-20231117</option>
+					<option value="monaco-editor@0.45.0-dev-20231025">monaco-editor@0.45.0-dev-20231025</option>
+					<option value="monaco-editor@0.45.0-dev-20231024">monaco-editor@0.45.0-dev-20231024</option>
+					<option value="monaco-editor@0.45.0-dev-20231023">monaco-editor@0.45.0-dev-20231023</option>
+					<option value="monaco-editor@0.45.0-dev-20231022">monaco-editor@0.45.0-dev-20231022</option>
+					<option value="monaco-editor@0.45.0-dev-20231021">monaco-editor@0.45.0-dev-20231021</option>
+					<option value="monaco-editor@0.45.0-dev-20231020">monaco-editor@0.45.0-dev-20231020</option>
+					<option value="monaco-editor@0.45.0-dev-20231019">monaco-editor@0.45.0-dev-20231019</option>
+					<option value="monaco-editor@0.45.0-dev-20231017">monaco-editor@0.45.0-dev-20231017</option>
+					<option value="monaco-editor@0.45.0-dev-20231016">monaco-editor@0.45.0-dev-20231016</option>
+					<option value="monaco-editor@0.45.0-dev-20231015">monaco-editor@0.45.0-dev-20231015</option>
+					<option value="monaco-editor@0.45.0-dev-20231014">monaco-editor@0.45.0-dev-20231014</option>
+					<option value="monaco-editor@0.45.0-dev-20231013">monaco-editor@0.45.0-dev-20231013</option>
+					<option value="monaco-editor@0.45.0-dev-20231012">monaco-editor@0.45.0-dev-20231012</option>
+					<option value="monaco-editor@0.45.0-dev-20231011">monaco-editor@0.45.0-dev-20231011</option>
+					<option value="monaco-editor@0.45.0-dev-20231010">monaco-editor@0.45.0-dev-20231010</option>
+					<option value="monaco-editor@0.45.0-dev-20231009">monaco-editor@0.45.0-dev-20231009</option>
+					<option value="monaco-editor@0.45.0-dev-20231008">monaco-editor@0.45.0-dev-20231008</option>
+					<option value="monaco-editor@0.45.0-dev-20231007">monaco-editor@0.45.0-dev-20231007</option>
+					<option value="monaco-editor@0.45.0-dev-20231006">monaco-editor@0.45.0-dev-20231006</option>
+					<option value="monaco-editor@0.44.0">monaco-editor@0.44.0</option>
+					<option value="monaco-editor@0.44.0-rc1">monaco-editor@0.44.0-rc1</option>
+					<option value="monaco-editor@0.44.0-dev-20231005">monaco-editor@0.44.0-dev-20231005</option>
+					<option value="monaco-editor@0.44.0-dev-20231004">monaco-editor@0.44.0-dev-20231004</option>
+					<option value="monaco-editor@0.44.0-dev-20231003">monaco-editor@0.44.0-dev-20231003</option>
+					<option value="monaco-editor@0.44.0-dev-20231002">monaco-editor@0.44.0-dev-20231002</option>
+					<option value="monaco-editor@0.44.0-dev-20231001">monaco-editor@0.44.0-dev-20231001</option>
+					<option value="monaco-editor@0.44.0-dev-20230930">monaco-editor@0.44.0-dev-20230930</option>
+					<option value="monaco-editor@0.44.0-dev-20230929">monaco-editor@0.44.0-dev-20230929</option>
+					<option value="monaco-editor@0.44.0-dev-20230928">monaco-editor@0.44.0-dev-20230928</option>
+					<option value="monaco-editor@0.44.0-dev-20230927">monaco-editor@0.44.0-dev-20230927</option>
+					<option value="monaco-editor@0.44.0-dev-20230926">monaco-editor@0.44.0-dev-20230926</option>
+					<option value="monaco-editor@0.44.0-dev-20230925">monaco-editor@0.44.0-dev-20230925</option>
+					<option value="monaco-editor@0.44.0-dev-20230924">monaco-editor@0.44.0-dev-20230924</option>
+					<option value="monaco-editor@0.44.0-dev-20230923">monaco-editor@0.44.0-dev-20230923</option>
+					<option value="monaco-editor@0.44.0-dev-20230922">monaco-editor@0.44.0-dev-20230922</option>
+					<option value="monaco-editor@0.44.0-dev-20230921">monaco-editor@0.44.0-dev-20230921</option>
+					<option value="monaco-editor@0.44.0-dev-20230920">monaco-editor@0.44.0-dev-20230920</option>
+					<option value="monaco-editor@0.44.0-dev-20230919">monaco-editor@0.44.0-dev-20230919</option>
+					<option value="monaco-editor@0.44.0-dev-20230918">monaco-editor@0.44.0-dev-20230918</option>
+					<option value="monaco-editor@0.44.0-dev-20230917">monaco-editor@0.44.0-dev-20230917</option>
+					<option value="monaco-editor@0.44.0-dev-20230916">monaco-editor@0.44.0-dev-20230916</option>
+					<option value="monaco-editor@0.44.0-dev-20230915">monaco-editor@0.44.0-dev-20230915</option>
+					<option value="monaco-editor@0.44.0-dev-20230914">monaco-editor@0.44.0-dev-20230914</option>
+					<option value="monaco-editor@0.44.0-dev-20230913">monaco-editor@0.44.0-dev-20230913</option>
+					<option value="monaco-editor@0.44.0-dev-20230912">monaco-editor@0.44.0-dev-20230912</option>
+					<option value="monaco-editor@0.43.0">monaco-editor@0.43.0</option>
+					<option value="monaco-editor@0.42.0-rc1">monaco-editor@0.42.0-rc1</option>
+					<option value="monaco-editor@0.42.0-dev-20230911">monaco-editor@0.42.0-dev-20230911</option>
+					<option value="monaco-editor@0.42.0-dev-20230910">monaco-editor@0.42.0-dev-20230910</option>
+					<option value="monaco-editor@0.42.0-dev-20230909">monaco-editor@0.42.0-dev-20230909</option>
+					<option value="monaco-editor@0.42.0-dev-20230908">monaco-editor@0.42.0-dev-20230908</option>
+					<option value="monaco-editor@0.42.0-dev-20230906">monaco-editor@0.42.0-dev-20230906</option>
+					<option value="monaco-editor@0.42.0-dev-20230905">monaco-editor@0.42.0-dev-20230905</option>
+					<option value="monaco-editor@0.42.0-dev-20230904">monaco-editor@0.42.0-dev-20230904</option>
+					<option value="monaco-editor@0.42.0-dev-20230903">monaco-editor@0.42.0-dev-20230903</option>
+					<option value="monaco-editor@0.42.0-dev-20230902">monaco-editor@0.42.0-dev-20230902</option>
+					<option value="monaco-editor@0.42.0-dev-20230901">monaco-editor@0.42.0-dev-20230901</option>
+					<option value="monaco-editor@0.42.0-dev-20230831">monaco-editor@0.42.0-dev-20230831</option>
+					<option value="monaco-editor@0.42.0-dev-20230830">monaco-editor@0.42.0-dev-20230830</option>
+					<option value="monaco-editor@0.42.0-dev-20230829">monaco-editor@0.42.0-dev-20230829</option>
+					<option value="monaco-editor@0.42.0-dev-20230828">monaco-editor@0.42.0-dev-20230828</option>
+					<option value="monaco-editor@0.42.0-dev-20230827">monaco-editor@0.42.0-dev-20230827</option>
+					<option value="monaco-editor@0.42.0-dev-20230826">monaco-editor@0.42.0-dev-20230826</option>
+					<option value="monaco-editor@0.42.0-dev-20230825">monaco-editor@0.42.0-dev-20230825</option>
+					<option value="monaco-editor@0.42.0-dev-20230824">monaco-editor@0.42.0-dev-20230824</option>
+					<option value="monaco-editor@0.42.0-dev-20230823">monaco-editor@0.42.0-dev-20230823</option>
+					<option value="monaco-editor@0.42.0-dev-20230822">monaco-editor@0.42.0-dev-20230822</option>
+					<option value="monaco-editor@0.42.0-dev-20230820">monaco-editor@0.42.0-dev-20230820</option>
+					<option value="monaco-editor@0.42.0-dev-20230819">monaco-editor@0.42.0-dev-20230819</option>
+					<option value="monaco-editor@0.42.0-dev-20230818">monaco-editor@0.42.0-dev-20230818</option>
+					<option value="monaco-editor@0.42.0-dev-20230817">monaco-editor@0.42.0-dev-20230817</option>
+					<option value="monaco-editor@0.42.0-dev-20230809">monaco-editor@0.42.0-dev-20230809</option>
+					<option value="monaco-editor@0.42.0-dev-20230808">monaco-editor@0.42.0-dev-20230808</option>
+					<option value="monaco-editor@0.42.0-dev-20230807">monaco-editor@0.42.0-dev-20230807</option>
+					<option value="monaco-editor@0.42.0-dev-20230806">monaco-editor@0.42.0-dev-20230806</option>
+					<option value="monaco-editor@0.42.0-dev-20230805">monaco-editor@0.42.0-dev-20230805</option>
+					<option value="monaco-editor@0.42.0-dev-20230804">monaco-editor@0.42.0-dev-20230804</option>
+					<option value="monaco-editor@0.41.0">monaco-editor@0.41.0</option>
+					<option value="monaco-editor@0.41.0-rc1">monaco-editor@0.41.0-rc1</option>
+					<option value="monaco-editor@0.41.0-dev-20230803">monaco-editor@0.41.0-dev-20230803</option>
+					<option value="monaco-editor@0.41.0-dev-20230802">monaco-editor@0.41.0-dev-20230802</option>
+					<option value="monaco-editor@0.41.0-dev-20230801">monaco-editor@0.41.0-dev-20230801</option>
+					<option value="monaco-editor@0.41.0-dev-20230731">monaco-editor@0.41.0-dev-20230731</option>
+					<option value="monaco-editor@0.41.0-dev.20230727">monaco-editor@0.41.0-dev.20230727</option>
+					<option value="monaco-editor@0.41.0-dev.20230719">monaco-editor@0.41.0-dev.20230719</option>
+					<option value="monaco-editor@0.41.0-dev.20230718">monaco-editor@0.41.0-dev.20230718</option>
+					<option value="monaco-editor@0.41.0-dev.20230717">monaco-editor@0.41.0-dev.20230717</option>
+					<option value="monaco-editor@0.41.0-dev.20230716">monaco-editor@0.41.0-dev.20230716</option>
+					<option value="monaco-editor@0.41.0-dev.20230715">monaco-editor@0.41.0-dev.20230715</option>
+					<option value="monaco-editor@0.41.0-dev.20230714">monaco-editor@0.41.0-dev.20230714</option>
+					<option value="monaco-editor@0.41.0-dev.20230713">monaco-editor@0.41.0-dev.20230713</option>
+					<option value="monaco-editor@0.41.0-dev.20230712">monaco-editor@0.41.0-dev.20230712</option>
+					<option value="monaco-editor@0.41.0-dev.20230711">monaco-editor@0.41.0-dev.20230711</option>
+					<option value="monaco-editor@0.41.0-dev.20230710">monaco-editor@0.41.0-dev.20230710</option>
+					<option value="monaco-editor@0.41.0-dev.20230709">monaco-editor@0.41.0-dev.20230709</option>
+					<option value="monaco-editor@0.41.0-dev.20230708">monaco-editor@0.41.0-dev.20230708</option>
+					<option value="monaco-editor@0.40.0">monaco-editor@0.40.0</option>
+					<option value="monaco-editor@0.40.0-dev.20230707">monaco-editor@0.40.0-dev.20230707</option>
+					<option value="monaco-editor@0.40.0-dev.20230706">monaco-editor@0.40.0-dev.20230706</option>
+					<option value="monaco-editor@0.40.0-dev.20230705">monaco-editor@0.40.0-dev.20230705</option>
+					<option value="monaco-editor@0.40.0-dev.20230704">monaco-editor@0.40.0-dev.20230704</option>
+					<option value="monaco-editor@0.40.0-dev.20230703">monaco-editor@0.40.0-dev.20230703</option>
+					<option value="monaco-editor@0.40.0-dev.20230702">monaco-editor@0.40.0-dev.20230702</option>
+					<option value="monaco-editor@0.40.0-dev.20230701">monaco-editor@0.40.0-dev.20230701</option>
+					<option value="monaco-editor@0.40.0-dev.20230630">monaco-editor@0.40.0-dev.20230630</option>
+					<option value="monaco-editor@0.40.0-dev.20230629">monaco-editor@0.40.0-dev.20230629</option>
+					<option value="monaco-editor@0.40.0-dev.20230628">monaco-editor@0.40.0-dev.20230628</option>
+					<option value="monaco-editor@0.40.0-dev.20230626">monaco-editor@0.40.0-dev.20230626</option>
+					<option value="monaco-editor@0.40.0-dev.20230625">monaco-editor@0.40.0-dev.20230625</option>
+					<option value="monaco-editor@0.40.0-dev.20230624">monaco-editor@0.40.0-dev.20230624</option>
+					<option value="monaco-editor@0.40.0-dev.20230623">monaco-editor@0.40.0-dev.20230623</option>
+					<option value="monaco-editor@0.40.0-dev.20230622">monaco-editor@0.40.0-dev.20230622</option>
+					<option value="monaco-editor@0.40.0-dev.20230621">monaco-editor@0.40.0-dev.20230621</option>
+					<option value="monaco-editor@0.40.0-dev.20230620">monaco-editor@0.40.0-dev.20230620</option>
+					<option value="monaco-editor@0.40.0-dev.20230619">monaco-editor@0.40.0-dev.20230619</option>
+					<option value="monaco-editor@0.40.0-dev.20230618">monaco-editor@0.40.0-dev.20230618</option>
+					<option value="monaco-editor@0.40.0-dev.20230617">monaco-editor@0.40.0-dev.20230617</option>
+					<option value="monaco-editor@0.40.0-dev.20230616">monaco-editor@0.40.0-dev.20230616</option>
+					<option value="monaco-editor@0.40.0-dev.20230615">monaco-editor@0.40.0-dev.20230615</option>
+					<option value="monaco-editor@0.40.0-dev.20230614">monaco-editor@0.40.0-dev.20230614</option>
+					<option value="monaco-editor@0.40.0-dev.20230613">monaco-editor@0.40.0-dev.20230613</option>
+					<option value="monaco-editor@0.40.0-dev.20230612">monaco-editor@0.40.0-dev.20230612</option>
+					<option value="monaco-editor@0.40.0-dev.20230611">monaco-editor@0.40.0-dev.20230611</option>
+					<option value="monaco-editor@0.40.0-dev.20230610">monaco-editor@0.40.0-dev.20230610</option>
+					<option value="monaco-editor@0.40.0-dev.20230609">monaco-editor@0.40.0-dev.20230609</option>
+					<option value="monaco-editor@0.40.0-dev.20230608">monaco-editor@0.40.0-dev.20230608</option>
+					<option value="monaco-editor@0.40.0-dev.20230607">monaco-editor@0.40.0-dev.20230607</option>
+					<option value="monaco-editor@0.39.0">monaco-editor@0.39.0</option>
+					<option value="monaco-editor@0.39.0-rc2">monaco-editor@0.39.0-rc2</option>
+					<option value="monaco-editor@0.39.0-dev.20230606">monaco-editor@0.39.0-dev.20230606</option>
+					<option value="monaco-editor@0.39.0-dev.20230601">monaco-editor@0.39.0-dev.20230601</option>
+					<option value="monaco-editor@0.39.0-dev.20230530">monaco-editor@0.39.0-dev.20230530</option>
+					<option value="monaco-editor@0.39.0-dev.20230529">monaco-editor@0.39.0-dev.20230529</option>
+					<option value="monaco-editor@0.39.0-dev.20230528">monaco-editor@0.39.0-dev.20230528</option>
+					<option value="monaco-editor@0.39.0-dev.20230527">monaco-editor@0.39.0-dev.20230527</option>
+					<option value="monaco-editor@0.39.0-dev.20230526">monaco-editor@0.39.0-dev.20230526</option>
+					<option value="monaco-editor@0.39.0-dev.20230525">monaco-editor@0.39.0-dev.20230525</option>
+					<option value="monaco-editor@0.39.0-dev.20230524">monaco-editor@0.39.0-dev.20230524</option>
+					<option value="monaco-editor@0.39.0-dev.20230523">monaco-editor@0.39.0-dev.20230523</option>
+					<option value="monaco-editor@0.39.0-dev.20230522">monaco-editor@0.39.0-dev.20230522</option>
+					<option value="monaco-editor@0.39.0-dev.20230521">monaco-editor@0.39.0-dev.20230521</option>
+					<option value="monaco-editor@0.39.0-dev.20230520">monaco-editor@0.39.0-dev.20230520</option>
+					<option value="monaco-editor@0.39.0-dev.20230519">monaco-editor@0.39.0-dev.20230519</option>
+					<option value="monaco-editor@0.39.0-dev.20230518">monaco-editor@0.39.0-dev.20230518</option>
+					<option value="monaco-editor@0.39.0-dev.20230516">monaco-editor@0.39.0-dev.20230516</option>
+					<option value="monaco-editor@0.39.0-dev.20230515">monaco-editor@0.39.0-dev.20230515</option>
+					<option value="monaco-editor@0.39.0-dev.20230514">monaco-editor@0.39.0-dev.20230514</option>
+					<option value="monaco-editor@0.39.0-dev.20230513">monaco-editor@0.39.0-dev.20230513</option>
+					<option value="monaco-editor@0.39.0-dev.20230512">monaco-editor@0.39.0-dev.20230512</option>
+					<option value="monaco-editor@0.39.0-dev.20230511">monaco-editor@0.39.0-dev.20230511</option>
+					<option value="monaco-editor@0.39.0-dev.20230510">monaco-editor@0.39.0-dev.20230510</option>
+					<option value="monaco-editor@0.39.0-dev.20230509">monaco-editor@0.39.0-dev.20230509</option>
+					<option value="monaco-editor@0.39.0-dev.20230508">monaco-editor@0.39.0-dev.20230508</option>
+					<option value="monaco-editor@0.39.0-dev.20230507">monaco-editor@0.39.0-dev.20230507</option>
+					<option value="monaco-editor@0.39.0-dev.20230506">monaco-editor@0.39.0-dev.20230506</option>
+					<option value="monaco-editor@0.39.0-dev.20230505">monaco-editor@0.39.0-dev.20230505</option>
+					<option value="monaco-editor@0.39.0-dev.20230504">monaco-editor@0.39.0-dev.20230504</option>
+					<option value="monaco-editor@0.39.0-dev.20230503">monaco-editor@0.39.0-dev.20230503</option>
+					<option value="monaco-editor@0.38.0">monaco-editor@0.38.0</option>
+					<option value="monaco-editor@0.38.0-dev.20230502">monaco-editor@0.38.0-dev.20230502</option>
+					<option value="monaco-editor@0.38.0-dev.20230501">monaco-editor@0.38.0-dev.20230501</option>
+					<option value="monaco-editor@0.38.0-dev.20230430">monaco-editor@0.38.0-dev.20230430</option>
+					<option value="monaco-editor@0.38.0-dev.20230429">monaco-editor@0.38.0-dev.20230429</option>
+					<option value="monaco-editor@0.38.0-dev.20230428">monaco-editor@0.38.0-dev.20230428</option>
+					<option value="monaco-editor@0.38.0-dev.20230427">monaco-editor@0.38.0-dev.20230427</option>
+					<option value="monaco-editor@0.38.0-dev.20230424">monaco-editor@0.38.0-dev.20230424</option>
+					<option value="monaco-editor@0.38.0-dev.20230423">monaco-editor@0.38.0-dev.20230423</option>
+					<option value="monaco-editor@0.38.0-dev.20230422">monaco-editor@0.38.0-dev.20230422</option>
+					<option value="monaco-editor@0.38.0-dev.20230420">monaco-editor@0.38.0-dev.20230420</option>
+					<option value="monaco-editor@0.38.0-dev.20230418">monaco-editor@0.38.0-dev.20230418</option>
+					<option value="monaco-editor@0.38.0-dev.20230417">monaco-editor@0.38.0-dev.20230417</option>
+					<option value="monaco-editor@0.38.0-dev.20230416">monaco-editor@0.38.0-dev.20230416</option>
+					<option value="monaco-editor@0.38.0-dev.20230415">monaco-editor@0.38.0-dev.20230415</option>
+					<option value="monaco-editor@0.38.0-dev.20230414">monaco-editor@0.38.0-dev.20230414</option>
+					<option value="monaco-editor@0.38.0-dev.20230412">monaco-editor@0.38.0-dev.20230412</option>
+					<option value="monaco-editor@0.38.0-dev.20230405">monaco-editor@0.38.0-dev.20230405</option>
+					<option value="monaco-editor@0.37.1">monaco-editor@0.37.1</option>
+					<option value="monaco-editor@0.37.0">monaco-editor@0.37.0</option>
+					<option value="monaco-editor@0.37.0-dev.20230404">monaco-editor@0.37.0-dev.20230404</option>
+					<option value="monaco-editor@0.37.0-dev.20230403">monaco-editor@0.37.0-dev.20230403</option>
+					<option value="monaco-editor@0.37.0-dev.20230330">monaco-editor@0.37.0-dev.20230330</option>
+					<option value="monaco-editor@0.37.0-dev.20230329">monaco-editor@0.37.0-dev.20230329</option>
+					<option value="monaco-editor@0.37.0-dev.20230328">monaco-editor@0.37.0-dev.20230328</option>
+					<option value="monaco-editor@0.37.0-dev.20230327">monaco-editor@0.37.0-dev.20230327</option>
+					<option value="monaco-editor@0.37.0-dev.20230326">monaco-editor@0.37.0-dev.20230326</option>
+					<option value="monaco-editor@0.37.0-dev.20230325">monaco-editor@0.37.0-dev.20230325</option>
+					<option value="monaco-editor@0.37.0-dev.20230324">monaco-editor@0.37.0-dev.20230324</option>
+					<option value="monaco-editor@0.37.0-dev.20230323">monaco-editor@0.37.0-dev.20230323</option>
+					<option value="monaco-editor@0.37.0-dev.20230322">monaco-editor@0.37.0-dev.20230322</option>
+					<option value="monaco-editor@0.37.0-dev.20230321">monaco-editor@0.37.0-dev.20230321</option>
+					<option value="monaco-editor@0.37.0-dev.20230320">monaco-editor@0.37.0-dev.20230320</option>
+					<option value="monaco-editor@0.37.0-dev.20230319">monaco-editor@0.37.0-dev.20230319</option>
+					<option value="monaco-editor@0.37.0-dev.20230318">monaco-editor@0.37.0-dev.20230318</option>
+					<option value="monaco-editor@0.37.0-dev.20230317">monaco-editor@0.37.0-dev.20230317</option>
+					<option value="monaco-editor@0.37.0-dev.20230316">monaco-editor@0.37.0-dev.20230316</option>
+					<option value="monaco-editor@0.37.0-dev.20230315">monaco-editor@0.37.0-dev.20230315</option>
+					<option value="monaco-editor@0.37.0-dev.20230314">monaco-editor@0.37.0-dev.20230314</option>
+					<option value="monaco-editor@0.37.0-dev.20230313">monaco-editor@0.37.0-dev.20230313</option>
+					<option value="monaco-editor@0.37.0-dev.20230312">monaco-editor@0.37.0-dev.20230312</option>
+					<option value="monaco-editor@0.37.0-dev.20230311">monaco-editor@0.37.0-dev.20230311</option>
+					<option value="monaco-editor@0.37.0-dev.20230310">monaco-editor@0.37.0-dev.20230310</option>
+					<option value="monaco-editor@0.37.0-dev.20230309">monaco-editor@0.37.0-dev.20230309</option>
+					<option value="monaco-editor@0.37.0-dev.20230308">monaco-editor@0.37.0-dev.20230308</option>
+					<option value="monaco-editor@0.37.0-dev.20230307">monaco-editor@0.37.0-dev.20230307</option>
+					<option value="monaco-editor@0.37.0-dev.20230306">monaco-editor@0.37.0-dev.20230306</option>
+					<option value="monaco-editor@0.37.0-dev.20230305">monaco-editor@0.37.0-dev.20230305</option>
+					<option value="monaco-editor@0.37.0-dev.20230304">monaco-editor@0.37.0-dev.20230304</option>
+					<option value="monaco-editor@0.37.0-dev.20230303">monaco-editor@0.37.0-dev.20230303</option>
+					<option value="monaco-editor@0.37.0-dev.20230301">monaco-editor@0.37.0-dev.20230301</option>
+					<option value="monaco-editor@0.37.0-dev.20230228">monaco-editor@0.37.0-dev.20230228</option>
+					<option value="monaco-editor@0.37.0-dev.20230227">monaco-editor@0.37.0-dev.20230227</option>
+					<option value="monaco-editor@0.37.0-dev.20230226">monaco-editor@0.37.0-dev.20230226</option>
+					<option value="monaco-editor@0.37.0-dev.20230225">monaco-editor@0.37.0-dev.20230225</option>
+					<option value="monaco-editor@0.36.1">monaco-editor@0.36.1</option>
+					<option value="monaco-editor@0.36.0">monaco-editor@0.36.0</option>
+					<option value="monaco-editor@0.36.0-dev.20230224">monaco-editor@0.36.0-dev.20230224</option>
+					<option value="monaco-editor@0.36.0-dev.20230223">monaco-editor@0.36.0-dev.20230223</option>
+					<option value="monaco-editor@0.36.0-dev.20230221">monaco-editor@0.36.0-dev.20230221</option>
+					<option value="monaco-editor@0.36.0-dev.20230220">monaco-editor@0.36.0-dev.20230220</option>
+					<option value="monaco-editor@0.36.0-dev.20230219">monaco-editor@0.36.0-dev.20230219</option>
+					<option value="monaco-editor@0.36.0-dev.20230218">monaco-editor@0.36.0-dev.20230218</option>
+					<option value="monaco-editor@0.36.0-dev.20230217">monaco-editor@0.36.0-dev.20230217</option>
+					<option value="monaco-editor@0.36.0-dev.20230216">monaco-editor@0.36.0-dev.20230216</option>
+					<option value="monaco-editor@0.36.0-dev.20230215">monaco-editor@0.36.0-dev.20230215</option>
+					<option value="monaco-editor@0.36.0-dev.20230214">monaco-editor@0.36.0-dev.20230214</option>
+					<option value="monaco-editor@0.36.0-dev.20230210">monaco-editor@0.36.0-dev.20230210</option>
+					<option value="monaco-editor@0.36.0-dev.20230209">monaco-editor@0.36.0-dev.20230209</option>
+					<option value="monaco-editor@0.36.0-dev.20230208">monaco-editor@0.36.0-dev.20230208</option>
+					<option value="monaco-editor@0.35.0">monaco-editor@0.35.0</option>
+					<option value="monaco-editor@0.35.0-dev.20230208">monaco-editor@0.35.0-dev.20230208</option>
+					<option value="monaco-editor@0.35.0-dev.20230206">monaco-editor@0.35.0-dev.20230206</option>
+					<option value="monaco-editor@0.35.0-dev.20230205">monaco-editor@0.35.0-dev.20230205</option>
+					<option value="monaco-editor@0.35.0-dev.20230204">monaco-editor@0.35.0-dev.20230204</option>
+					<option value="monaco-editor@0.35.0-dev.20230202">monaco-editor@0.35.0-dev.20230202</option>
+					<option value="monaco-editor@0.35.0-dev.20230201">monaco-editor@0.35.0-dev.20230201</option>
+					<option value="monaco-editor@0.35.0-dev.20230131">monaco-editor@0.35.0-dev.20230131</option>
+					<option value="monaco-editor@0.35.0-dev.20230129">monaco-editor@0.35.0-dev.20230129</option>
+					<option value="monaco-editor@0.35.0-dev.20230128">monaco-editor@0.35.0-dev.20230128</option>
+					<option value="monaco-editor@0.35.0-dev.20230127">monaco-editor@0.35.0-dev.20230127</option>
+					<option value="monaco-editor@0.35.0-dev.20230126">monaco-editor@0.35.0-dev.20230126</option>
+					<option value="monaco-editor@0.35.0-dev.20230125">monaco-editor@0.35.0-dev.20230125</option>
+					<option value="monaco-editor@0.35.0-dev.20230124">monaco-editor@0.35.0-dev.20230124</option>
+					<option value="monaco-editor@0.35.0-dev.20230123">monaco-editor@0.35.0-dev.20230123</option>
+					<option value="monaco-editor@0.35.0-dev.20230122">monaco-editor@0.35.0-dev.20230122</option>
+					<option value="monaco-editor@0.35.0-dev.20230121">monaco-editor@0.35.0-dev.20230121</option>
+					<option value="monaco-editor@0.35.0-dev.20230120">monaco-editor@0.35.0-dev.20230120</option>
+					<option value="monaco-editor@0.35.0-dev.20230119">monaco-editor@0.35.0-dev.20230119</option>
+					<option value="monaco-editor@0.35.0-dev.20230118">monaco-editor@0.35.0-dev.20230118</option>
+					<option value="monaco-editor@0.35.0-dev.20230117">monaco-editor@0.35.0-dev.20230117</option>
+					<option value="monaco-editor@0.35.0-dev.20230112">monaco-editor@0.35.0-dev.20230112</option>
+					<option value="monaco-editor@0.35.0-dev.20230111">monaco-editor@0.35.0-dev.20230111</option>
+					<option value="monaco-editor@0.35.0-dev.20230110">monaco-editor@0.35.0-dev.20230110</option>
+					<option value="monaco-editor@0.35.0-dev.20230109">monaco-editor@0.35.0-dev.20230109</option>
+					<option value="monaco-editor@0.35.0-dev.20230108">monaco-editor@0.35.0-dev.20230108</option>
+					<option value="monaco-editor@0.35.0-dev.20230107">monaco-editor@0.35.0-dev.20230107</option>
+					<option value="monaco-editor@0.35.0-dev.20230106">monaco-editor@0.35.0-dev.20230106</option>
+					<option value="monaco-editor@0.35.0-dev.20230105">monaco-editor@0.35.0-dev.20230105</option>
+					<option value="monaco-editor@0.35.0-dev.20230104">monaco-editor@0.35.0-dev.20230104</option>
+					<option value="monaco-editor@0.35.0-dev.20230103">monaco-editor@0.35.0-dev.20230103</option>
+					<option value="monaco-editor@0.35.0-dev.20230102">monaco-editor@0.35.0-dev.20230102</option>
+					<option value="monaco-editor@0.35.0-dev.20230101">monaco-editor@0.35.0-dev.20230101</option>
+					<option value="monaco-editor@0.35.0-dev.20221231">monaco-editor@0.35.0-dev.20221231</option>
+					<option value="monaco-editor@0.35.0-dev.20221230">monaco-editor@0.35.0-dev.20221230</option>
+					<option value="monaco-editor@0.35.0-dev.20221229">monaco-editor@0.35.0-dev.20221229</option>
+					<option value="monaco-editor@0.35.0-dev.20221228">monaco-editor@0.35.0-dev.20221228</option>
+					<option value="monaco-editor@0.35.0-dev.20221227">monaco-editor@0.35.0-dev.20221227</option>
+					<option value="monaco-editor@0.35.0-dev.20221226">monaco-editor@0.35.0-dev.20221226</option>
+					<option value="monaco-editor@0.35.0-dev.20221225">monaco-editor@0.35.0-dev.20221225</option>
+					<option value="monaco-editor@0.35.0-dev.20221224">monaco-editor@0.35.0-dev.20221224</option>
+					<option value="monaco-editor@0.35.0-dev.20221223">monaco-editor@0.35.0-dev.20221223</option>
+					<option value="monaco-editor@0.35.0-dev.20221222">monaco-editor@0.35.0-dev.20221222</option>
+					<option value="monaco-editor@0.35.0-dev.20221221">monaco-editor@0.35.0-dev.20221221</option>
+					<option value="monaco-editor@0.35.0-dev.20221220">monaco-editor@0.35.0-dev.20221220</option>
+					<option value="monaco-editor@0.35.0-dev.20221219">monaco-editor@0.35.0-dev.20221219</option>
+					<option value="monaco-editor@0.35.0-dev.20221218">monaco-editor@0.35.0-dev.20221218</option>
+					<option value="monaco-editor@0.35.0-dev.20221217">monaco-editor@0.35.0-dev.20221217</option>
+					<option value="monaco-editor@0.35.0-dev.20221216">monaco-editor@0.35.0-dev.20221216</option>
+					<option value="monaco-editor@0.35.0-dev.20221215">monaco-editor@0.35.0-dev.20221215</option>
+					<option value="monaco-editor@0.35.0-dev.20221214">monaco-editor@0.35.0-dev.20221214</option>
+					<option value="monaco-editor@0.35.0-dev.20221207">monaco-editor@0.35.0-dev.20221207</option>
+					<option value="monaco-editor@0.35.0-dev.20221206">monaco-editor@0.35.0-dev.20221206</option>
+					<option value="monaco-editor@0.35.0-dev.20221205">monaco-editor@0.35.0-dev.20221205</option>
+					<option value="monaco-editor@0.35.0-dev.20221204">monaco-editor@0.35.0-dev.20221204</option>
+					<option value="monaco-editor@0.35.0-dev.20221203">monaco-editor@0.35.0-dev.20221203</option>
+					<option value="monaco-editor@0.35.0-dev.20221202">monaco-editor@0.35.0-dev.20221202</option>
+					<option value="monaco-editor@0.35.0-dev.20221201">monaco-editor@0.35.0-dev.20221201</option>
+					<option value="monaco-editor@0.35.0-dev.20221130">monaco-editor@0.35.0-dev.20221130</option>
+					<option value="monaco-editor@0.35.0-dev.20221129">monaco-editor@0.35.0-dev.20221129</option>
+					<option value="monaco-editor@0.35.0-dev.20221128">monaco-editor@0.35.0-dev.20221128</option>
+					<option value="monaco-editor@0.35.0-dev.20221127">monaco-editor@0.35.0-dev.20221127</option>
+					<option value="monaco-editor@0.35.0-dev.20221126">monaco-editor@0.35.0-dev.20221126</option>
+					<option value="monaco-editor@0.35.0-dev.20221124">monaco-editor@0.35.0-dev.20221124</option>
+					<option value="monaco-editor@0.35.0-dev.20221123">monaco-editor@0.35.0-dev.20221123</option>
+					<option value="monaco-editor@0.35.0-dev.20221122">monaco-editor@0.35.0-dev.20221122</option>
+					<option value="monaco-editor@0.35.0-dev.20221117">monaco-editor@0.35.0-dev.20221117</option>
+					<option value="monaco-editor@0.35.0-dev.20221116">monaco-editor@0.35.0-dev.20221116</option>
+					<option value="monaco-editor@0.35.0-dev.20221114">monaco-editor@0.35.0-dev.20221114</option>
+					<option value="monaco-editor@0.35.0-dev.20221113">monaco-editor@0.35.0-dev.20221113</option>
+					<option value="monaco-editor@0.35.0-dev.20221112">monaco-editor@0.35.0-dev.20221112</option>
+					<option value="monaco-editor@0.35.0-dev.20221111">monaco-editor@0.35.0-dev.20221111</option>
+					<option value="monaco-editor@0.35.0-dev.20221110">monaco-editor@0.35.0-dev.20221110</option>
+					<option value="monaco-editor@0.35.0-dev.20221109">monaco-editor@0.35.0-dev.20221109</option>
+					<option value="monaco-editor@0.35.0-dev.20221108">monaco-editor@0.35.0-dev.20221108</option>
+					<option value="monaco-editor@0.35.0-dev.20221107">monaco-editor@0.35.0-dev.20221107</option>
+					<option value="monaco-editor@0.35.0-dev.20221106">monaco-editor@0.35.0-dev.20221106</option>
+					<option value="monaco-editor@0.35.0-dev.20221105">monaco-editor@0.35.0-dev.20221105</option>
+					<option value="monaco-editor@0.35.0-dev.20221104">monaco-editor@0.35.0-dev.20221104</option>
+					<option value="monaco-editor@0.35.0-dev.20221103">monaco-editor@0.35.0-dev.20221103</option>
+					<option value="monaco-editor@0.35.0-dev.20221102">monaco-editor@0.35.0-dev.20221102</option>
+					<option value="monaco-editor@0.35.0-dev.20221101">monaco-editor@0.35.0-dev.20221101</option>
+					<option value="monaco-editor@0.35.0-dev.20221031">monaco-editor@0.35.0-dev.20221031</option>
+					<option value="monaco-editor@0.35.0-dev.20221030">monaco-editor@0.35.0-dev.20221030</option>
+					<option value="monaco-editor@0.35.0-dev.20221029">monaco-editor@0.35.0-dev.20221029</option>
+					<option value="monaco-editor@0.35.0-dev.20221028">monaco-editor@0.35.0-dev.20221028</option>
+					<option value="monaco-editor@0.35.0-dev.20221027">monaco-editor@0.35.0-dev.20221027</option>
+					<option value="monaco-editor@0.35.0-dev.20221026">monaco-editor@0.35.0-dev.20221026</option>
+					<option value="monaco-editor@0.35.0-dev.20221024">monaco-editor@0.35.0-dev.20221024</option>
+					<option value="monaco-editor@0.35.0-dev.20221023">monaco-editor@0.35.0-dev.20221023</option>
+					<option value="monaco-editor@0.35.0-dev.20221022">monaco-editor@0.35.0-dev.20221022</option>
+					<option value="monaco-editor@0.35.0-dev.20221021">monaco-editor@0.35.0-dev.20221021</option>
+					<option value="monaco-editor@0.35.0-dev.20221020">monaco-editor@0.35.0-dev.20221020</option>
+					<option value="monaco-editor@0.35.0-dev.20221019">monaco-editor@0.35.0-dev.20221019</option>
+					<option value="monaco-editor@0.35.0-dev.20221018">monaco-editor@0.35.0-dev.20221018</option>
+					<option value="monaco-editor@0.35.0-dev.20221017">monaco-editor@0.35.0-dev.20221017</option>
+					<option value="monaco-editor@0.35.0-dev.20221016">monaco-editor@0.35.0-dev.20221016</option>
+					<option value="monaco-editor@0.35.0-dev.20221015">monaco-editor@0.35.0-dev.20221015</option>
+					<option value="monaco-editor@0.35.0-dev.20221014">monaco-editor@0.35.0-dev.20221014</option>
+					<option value="monaco-editor@0.35.0-dev.20221013">monaco-editor@0.35.0-dev.20221013</option>
+					<option value="monaco-editor@0.35.0-dev.20221012">monaco-editor@0.35.0-dev.20221012</option>
+					<option value="monaco-editor@0.35.0-dev.20221011">monaco-editor@0.35.0-dev.20221011</option>
+					<option value="monaco-editor@0.35.0-dev.20221010">monaco-editor@0.35.0-dev.20221010</option>
+					<option value="monaco-editor@0.35.0-dev.20221009">monaco-editor@0.35.0-dev.20221009</option>
+					<option value="monaco-editor@0.35.0-dev.20221008">monaco-editor@0.35.0-dev.20221008</option>
+					<option value="monaco-editor@0.35.0-dev.20221007">monaco-editor@0.35.0-dev.20221007</option>
+					<option value="monaco-editor@0.35.0-dev.20221006">monaco-editor@0.35.0-dev.20221006</option>
+					<option value="monaco-editor@0.35.0-dev.20221005">monaco-editor@0.35.0-dev.20221005</option>
+					<option value="monaco-editor@0.35.0-dev.20221004">monaco-editor@0.35.0-dev.20221004</option>
+					<option value="monaco-editor@0.35.0-dev.20221003">monaco-editor@0.35.0-dev.20221003</option>
+					<option value="monaco-editor@0.35.0-dev.20221002">monaco-editor@0.35.0-dev.20221002</option>
+					<option value="monaco-editor@0.35.0-dev.20221001">monaco-editor@0.35.0-dev.20221001</option>
+					<option value="monaco-editor@0.35.0-dev.20220929">monaco-editor@0.35.0-dev.20220929</option>
+					<option value="monaco-editor@0.35.0-dev.20220830">monaco-editor@0.35.0-dev.20220830</option>
+					<option value="monaco-editor@0.35.0-dev.20220829">monaco-editor@0.35.0-dev.20220829</option>
+					<option value="monaco-editor@0.35.0-dev.20220827">monaco-editor@0.35.0-dev.20220827</option>
+					<option value="monaco-editor@0.35.0-dev.20220826">monaco-editor@0.35.0-dev.20220826</option>
+					<option value="monaco-editor@0.35.0-dev.20220815">monaco-editor@0.35.0-dev.20220815</option>
+					<option value="monaco-editor@0.35.0-dev.20220814">monaco-editor@0.35.0-dev.20220814</option>
+					<option value="monaco-editor@0.35.0-dev.20220813">monaco-editor@0.35.0-dev.20220813</option>
+					<option value="monaco-editor@0.35.0-dev.20220812">monaco-editor@0.35.0-dev.20220812</option>
+					<option value="monaco-editor@0.35.0-dev.20220811">monaco-editor@0.35.0-dev.20220811</option>
+					<option value="monaco-editor@0.35.0-dev.20220810">monaco-editor@0.35.0-dev.20220810</option>
+					<option value="monaco-editor@0.35.0-dev.20220809">monaco-editor@0.35.0-dev.20220809</option>
+					<option value="monaco-editor@0.35.0-dev.20220808">monaco-editor@0.35.0-dev.20220808</option>
+					<option value="monaco-editor@0.35.0-dev.20220807">monaco-editor@0.35.0-dev.20220807</option>
+					<option value="monaco-editor@0.35.0-dev.20220806">monaco-editor@0.35.0-dev.20220806</option>
+					<option value="monaco-editor@0.35.0-dev.20220805">monaco-editor@0.35.0-dev.20220805</option>
+					<option value="monaco-editor@0.34.1">monaco-editor@0.34.1</option>
+					<option value="monaco-editor@0.34.0">monaco-editor@0.34.0</option>
+					<option value="monaco-editor@0.34.0-dev.20220803">monaco-editor@0.34.0-dev.20220803</option>
+					<option value="monaco-editor@0.34.0-dev.20220802">monaco-editor@0.34.0-dev.20220802</option>
+					<option value="monaco-editor@0.34.0-dev.20220801">monaco-editor@0.34.0-dev.20220801</option>
+					<option value="monaco-editor@0.34.0-dev.20220731">monaco-editor@0.34.0-dev.20220731</option>
+					<option value="monaco-editor@0.34.0-dev.20220730">monaco-editor@0.34.0-dev.20220730</option>
+					<option value="monaco-editor@0.34.0-dev.20220729">monaco-editor@0.34.0-dev.20220729</option>
+					<option value="monaco-editor@0.34.0-dev.20220727">monaco-editor@0.34.0-dev.20220727</option>
+					<option value="monaco-editor@0.34.0-dev.20220726">monaco-editor@0.34.0-dev.20220726</option>
+					<option value="monaco-editor@0.34.0-dev.20220725">monaco-editor@0.34.0-dev.20220725</option>
+					<option value="monaco-editor@0.34.0-dev.20220724">monaco-editor@0.34.0-dev.20220724</option>
+					<option value="monaco-editor@0.34.0-dev.20220723">monaco-editor@0.34.0-dev.20220723</option>
+					<option value="monaco-editor@0.34.0-dev.20220722">monaco-editor@0.34.0-dev.20220722</option>
+					<option value="monaco-editor@0.34.0-dev.20220721">monaco-editor@0.34.0-dev.20220721</option>
+					<option value="monaco-editor@0.34.0-dev.20220720">monaco-editor@0.34.0-dev.20220720</option>
+					<option value="monaco-editor@0.34.0-dev.20220706">monaco-editor@0.34.0-dev.20220706</option>
+					<option value="monaco-editor@0.34.0-dev.20220705">monaco-editor@0.34.0-dev.20220705</option>
+					<option value="monaco-editor@0.34.0-dev.20220704">monaco-editor@0.34.0-dev.20220704</option>
+					<option value="monaco-editor@0.34.0-dev.20220703">monaco-editor@0.34.0-dev.20220703</option>
+					<option value="monaco-editor@0.34.0-dev.20220702">monaco-editor@0.34.0-dev.20220702</option>
+					<option value="monaco-editor@0.34.0-dev.20220701">monaco-editor@0.34.0-dev.20220701</option>
+					<option value="monaco-editor@0.34.0-dev.20220630">monaco-editor@0.34.0-dev.20220630</option>
+					<option value="monaco-editor@0.34.0-dev.20220629">monaco-editor@0.34.0-dev.20220629</option>
+					<option value="monaco-editor@0.34.0-dev.20220628">monaco-editor@0.34.0-dev.20220628</option>
+					<option value="monaco-editor@0.34.0-dev.20220627">monaco-editor@0.34.0-dev.20220627</option>
+					<option value="monaco-editor@0.34.0-dev.20220626">monaco-editor@0.34.0-dev.20220626</option>
+					<option value="monaco-editor@0.34.0-dev.20220625">monaco-editor@0.34.0-dev.20220625</option>
+					<option value="monaco-editor@0.34.0-dev.20220624">monaco-editor@0.34.0-dev.20220624</option>
+					<option value="monaco-editor@0.34.0-dev.20220623">monaco-editor@0.34.0-dev.20220623</option>
+					<option value="monaco-editor@0.34.0-dev.20220622">monaco-editor@0.34.0-dev.20220622</option>
+					<option value="monaco-editor@0.34.0-dev.20220620">monaco-editor@0.34.0-dev.20220620</option>
+					<option value="monaco-editor@0.34.0-dev.20220619">monaco-editor@0.34.0-dev.20220619</option>
+					<option value="monaco-editor@0.34.0-dev.20220618">monaco-editor@0.34.0-dev.20220618</option>
+					<option value="monaco-editor@0.34.0-dev.20220617">monaco-editor@0.34.0-dev.20220617</option>
+					<option value="monaco-editor@0.34.0-dev.20220616">monaco-editor@0.34.0-dev.20220616</option>
+					<option value="monaco-editor@0.34.0-dev.20220615">monaco-editor@0.34.0-dev.20220615</option>
+					<option value="monaco-editor@0.34.0-dev.20220613">monaco-editor@0.34.0-dev.20220613</option>
+					<option value="monaco-editor@0.34.0-dev.20220612">monaco-editor@0.34.0-dev.20220612</option>
+					<option value="monaco-editor@0.34.0-dev.20220611">monaco-editor@0.34.0-dev.20220611</option>
+					<option value="monaco-editor@0.34.0-dev.20220610">monaco-editor@0.34.0-dev.20220610</option>
+					<option value="monaco-editor@0.34.0-dev.20220609">monaco-editor@0.34.0-dev.20220609</option>
+					<option value="monaco-editor@0.34.0-dev.20220608">monaco-editor@0.34.0-dev.20220608</option>
+					<option value="monaco-editor@0.34.0-dev.20220607">monaco-editor@0.34.0-dev.20220607</option>
+					<option value="monaco-editor@0.34.0-dev.20220606">monaco-editor@0.34.0-dev.20220606</option>
+					<option value="monaco-editor@0.34.0-dev.20220605">monaco-editor@0.34.0-dev.20220605</option>
+					<option value="monaco-editor@0.34.0-dev.20220604">monaco-editor@0.34.0-dev.20220604</option>
+					<option value="monaco-editor@0.34.0-dev.20220603">monaco-editor@0.34.0-dev.20220603</option>
+					<option value="monaco-editor@0.34.0-dev.20220602">monaco-editor@0.34.0-dev.20220602</option>
+					<option value="monaco-editor@0.34.0-dev.20220601">monaco-editor@0.34.0-dev.20220601</option>
+					<option value="monaco-editor@0.34.0-dev.20220531">monaco-editor@0.34.0-dev.20220531</option>
+					<option value="monaco-editor@0.34.0-dev.20220530">monaco-editor@0.34.0-dev.20220530</option>
+					<option value="monaco-editor@0.34.0-dev.20220529">monaco-editor@0.34.0-dev.20220529</option>
+					<option value="monaco-editor@0.34.0-dev.20220528">monaco-editor@0.34.0-dev.20220528</option>
+					<option value="monaco-editor@0.34.0-dev.20220526">monaco-editor@0.34.0-dev.20220526</option>
+					<option value="monaco-editor@0.34.0-dev.20220525">monaco-editor@0.34.0-dev.20220525</option>
+					<option value="monaco-editor@0.34.0-dev.20220524">monaco-editor@0.34.0-dev.20220524</option>
+					<option value="monaco-editor@0.34.0-dev.20220523">monaco-editor@0.34.0-dev.20220523</option>
+					<option value="monaco-editor@0.34.0-dev.20220522">monaco-editor@0.34.0-dev.20220522</option>
+					<option value="monaco-editor@0.34.0-dev.20220521">monaco-editor@0.34.0-dev.20220521</option>
+					<option value="monaco-editor@0.34.0-dev.20220520">monaco-editor@0.34.0-dev.20220520</option>
+					<option value="monaco-editor@0.34.0-dev.20220519">monaco-editor@0.34.0-dev.20220519</option>
+					<option value="monaco-editor@0.34.0-dev.20220518">monaco-editor@0.34.0-dev.20220518</option>
+					<option value="monaco-editor@0.34.0-dev.20220517">monaco-editor@0.34.0-dev.20220517</option>
+					<option value="monaco-editor@0.34.0-dev.20220516">monaco-editor@0.34.0-dev.20220516</option>
+					<option value="monaco-editor@0.34.0-dev.20220515">monaco-editor@0.34.0-dev.20220515</option>
+					<option value="monaco-editor@0.34.0-dev.20220514">monaco-editor@0.34.0-dev.20220514</option>
+					<option value="monaco-editor@0.34.0-dev.20220513">monaco-editor@0.34.0-dev.20220513</option>
+					<option value="monaco-editor@0.34.0-dev.20220512">monaco-editor@0.34.0-dev.20220512</option>
+					<option value="monaco-editor@0.34.0-dev.20220511">monaco-editor@0.34.0-dev.20220511</option>
+					<option value="monaco-editor@0.34.0-dev.20220510">monaco-editor@0.34.0-dev.20220510</option>
+					<option value="monaco-editor@0.34.0-dev.20220509">monaco-editor@0.34.0-dev.20220509</option>
+					<option value="monaco-editor@0.34.0-dev.20220508">monaco-editor@0.34.0-dev.20220508</option>
+					<option value="monaco-editor@0.34.0-dev.20220507">monaco-editor@0.34.0-dev.20220507</option>
+					<option value="monaco-editor@0.34.0-dev.20220506">monaco-editor@0.34.0-dev.20220506</option>
+					<option value="monaco-editor@0.34.0-dev.20220505">monaco-editor@0.34.0-dev.20220505</option>
+					<option value="monaco-editor@0.34.0-dev.20220504">monaco-editor@0.34.0-dev.20220504</option>
+					<option value="monaco-editor@0.34.0-dev.20220503">monaco-editor@0.34.0-dev.20220503</option>
+					<option value="monaco-editor@0.34.0-dev.20220502">monaco-editor@0.34.0-dev.20220502</option>
+					<option value="monaco-editor@0.34.0-dev.20220430">monaco-editor@0.34.0-dev.20220430</option>
+					<option value="monaco-editor@0.34.0-dev.20220429">monaco-editor@0.34.0-dev.20220429</option>
+					<option value="monaco-editor@0.34.0-dev.20220428">monaco-editor@0.34.0-dev.20220428</option>
+					<option value="monaco-editor@0.34.0-dev.20220427">monaco-editor@0.34.0-dev.20220427</option>
+					<option value="monaco-editor@0.34.0-dev.20220426">monaco-editor@0.34.0-dev.20220426</option>
+					<option value="monaco-editor@0.34.0-dev.20220425">monaco-editor@0.34.0-dev.20220425</option>
+					<option value="monaco-editor@0.34.0-dev.20220424">monaco-editor@0.34.0-dev.20220424</option>
+					<option value="monaco-editor@0.34.0-dev.20220423">monaco-editor@0.34.0-dev.20220423</option>
+					<option value="monaco-editor@0.34.0-dev.20220422">monaco-editor@0.34.0-dev.20220422</option>
+					<option value="monaco-editor@0.34.0-dev.20220421">monaco-editor@0.34.0-dev.20220421</option>
+					<option value="monaco-editor@0.34.0-dev.20220420">monaco-editor@0.34.0-dev.20220420</option>
+					<option value="monaco-editor@0.34.0-dev.20220419">monaco-editor@0.34.0-dev.20220419</option>
+					<option value="monaco-editor@0.34.0-dev.20220418">monaco-editor@0.34.0-dev.20220418</option>
+					<option value="monaco-editor@0.34.0-dev.20220416">monaco-editor@0.34.0-dev.20220416</option>
+					<option value="monaco-editor@0.34.0-dev.20220415">monaco-editor@0.34.0-dev.20220415</option>
+					<option value="monaco-editor@0.34.0-dev.20220414">monaco-editor@0.34.0-dev.20220414</option>
+					<option value="monaco-editor@0.34.0-dev.20220413">monaco-editor@0.34.0-dev.20220413</option>
+					<option value="monaco-editor@0.34.0-dev.20220412">monaco-editor@0.34.0-dev.20220412</option>
+					<option value="monaco-editor@0.34.0-dev.20220411">monaco-editor@0.34.0-dev.20220411</option>
+					<option value="monaco-editor@0.34.0-dev.20220410">monaco-editor@0.34.0-dev.20220410</option>
+					<option value="monaco-editor@0.34.0-dev.20220409">monaco-editor@0.34.0-dev.20220409</option>
+					<option value="monaco-editor@0.34.0-dev.20220408">monaco-editor@0.34.0-dev.20220408</option>
+					<option value="monaco-editor@0.34.0-dev.20220407">monaco-editor@0.34.0-dev.20220407</option>
+					<option value="monaco-editor@0.34.0-dev.20220406">monaco-editor@0.34.0-dev.20220406</option>
+					<option value="monaco-editor@0.34.0-dev.20220405">monaco-editor@0.34.0-dev.20220405</option>
+					<option value="monaco-editor@0.34.0-dev.20220404">monaco-editor@0.34.0-dev.20220404</option>
+					<option value="monaco-editor@0.34.0-dev.20220403">monaco-editor@0.34.0-dev.20220403</option>
+					<option value="monaco-editor@0.34.0-dev.20220402">monaco-editor@0.34.0-dev.20220402</option>
+					<option value="monaco-editor@0.34.0-dev.20220401">monaco-editor@0.34.0-dev.20220401</option>
+					<option value="monaco-editor@0.34.0-dev.20220331">monaco-editor@0.34.0-dev.20220331</option>
+					<option value="monaco-editor@0.34.0-dev.20220330">monaco-editor@0.34.0-dev.20220330</option>
+					<option value="monaco-editor@0.34.0-dev.20220329">monaco-editor@0.34.0-dev.20220329</option>
+					<option value="monaco-editor@0.34.0-dev.20220328">monaco-editor@0.34.0-dev.20220328</option>
+					<option value="monaco-editor@0.34.0-dev.20220327">monaco-editor@0.34.0-dev.20220327</option>
+					<option value="monaco-editor@0.34.0-dev.20220326">monaco-editor@0.34.0-dev.20220326</option>
+					<option value="monaco-editor@0.34.0-dev.20220325">monaco-editor@0.34.0-dev.20220325</option>
+					<option value="monaco-editor@0.34.0-dev.20220324">monaco-editor@0.34.0-dev.20220324</option>
+					<option value="monaco-editor@0.34.0-dev.20220323">monaco-editor@0.34.0-dev.20220323</option>
+					<option value="monaco-editor@0.34.0-dev.20220322">monaco-editor@0.34.0-dev.20220322</option>
+					<option value="monaco-editor@0.34.0-dev.20220321">monaco-editor@0.34.0-dev.20220321</option>
+					<option value="monaco-editor@0.34.0-dev.20220320">monaco-editor@0.34.0-dev.20220320</option>
+					<option value="monaco-editor@0.34.0-dev.20220319">monaco-editor@0.34.0-dev.20220319</option>
+					<option value="monaco-editor@0.34.0-dev.20220318">monaco-editor@0.34.0-dev.20220318</option>
+					<option value="monaco-editor@0.34.0-dev.20220317">monaco-editor@0.34.0-dev.20220317</option>
+					<option value="monaco-editor@0.34.0-dev.20220316">monaco-editor@0.34.0-dev.20220316</option>
+					<option value="monaco-editor@0.34.0-dev.20220315">monaco-editor@0.34.0-dev.20220315</option>
+					<option value="monaco-editor@0.34.0-dev.20220314">monaco-editor@0.34.0-dev.20220314</option>
+					<option value="monaco-editor@0.34.0-dev.20220313">monaco-editor@0.34.0-dev.20220313</option>
+					<option value="monaco-editor@0.34.0-dev.20220312">monaco-editor@0.34.0-dev.20220312</option>
+					<option value="monaco-editor@0.33.0">monaco-editor@0.33.0</option>
+					<option value="monaco-editor@0.33.0-dev.20220311">monaco-editor@0.33.0-dev.20220311</option>
+					<option value="monaco-editor@0.33.0-dev.20220310">monaco-editor@0.33.0-dev.20220310</option>
+					<option value="monaco-editor@0.33.0-dev.20220309">monaco-editor@0.33.0-dev.20220309</option>
+					<option value="monaco-editor@0.33.0-dev.20220307">monaco-editor@0.33.0-dev.20220307</option>
+					<option value="monaco-editor@0.33.0-dev.20220306">monaco-editor@0.33.0-dev.20220306</option>
+					<option value="monaco-editor@0.33.0-dev.20220303">monaco-editor@0.33.0-dev.20220303</option>
+					<option value="monaco-editor@0.33.0-dev.20220302">monaco-editor@0.33.0-dev.20220302</option>
+					<option value="monaco-editor@0.33.0-dev.20220301">monaco-editor@0.33.0-dev.20220301</option>
+					<option value="monaco-editor@0.33.0-dev.20220228">monaco-editor@0.33.0-dev.20220228</option>
+					<option value="monaco-editor@0.33.0-dev.20220227">monaco-editor@0.33.0-dev.20220227</option>
+					<option value="monaco-editor@0.33.0-dev.20220226">monaco-editor@0.33.0-dev.20220226</option>
+					<option value="monaco-editor@0.33.0-dev.20220224">monaco-editor@0.33.0-dev.20220224</option>
+					<option value="monaco-editor@0.33.0-dev.20220223">monaco-editor@0.33.0-dev.20220223</option>
+					<option value="monaco-editor@0.33.0-dev.20220222">monaco-editor@0.33.0-dev.20220222</option>
+					<option value="monaco-editor@0.33.0-dev.20220221">monaco-editor@0.33.0-dev.20220221</option>
+					<option value="monaco-editor@0.33.0-dev.20220220">monaco-editor@0.33.0-dev.20220220</option>
+					<option value="monaco-editor@0.33.0-dev.20220218">monaco-editor@0.33.0-dev.20220218</option>
+					<option value="monaco-editor@0.33.0-dev.20220217">monaco-editor@0.33.0-dev.20220217</option>
+					<option value="monaco-editor@0.33.0-dev.20220216">monaco-editor@0.33.0-dev.20220216</option>
+					<option value="monaco-editor@0.33.0-dev.20220215">monaco-editor@0.33.0-dev.20220215</option>
+					<option value="monaco-editor@0.33.0-dev.20220214">monaco-editor@0.33.0-dev.20220214</option>
+					<option value="monaco-editor@0.33.0-dev.20220208">monaco-editor@0.33.0-dev.20220208</option>
+					<option value="monaco-editor@0.33.0-dev.20220207">monaco-editor@0.33.0-dev.20220207</option>
+					<option value="monaco-editor@0.33.0-dev.20220204">monaco-editor@0.33.0-dev.20220204</option>
+					<option value="monaco-editor@0.32.1">monaco-editor@0.32.1</option>
+					<option value="monaco-editor@0.32.0">monaco-editor@0.32.0</option>
+					<option value="monaco-editor@0.32.0-dev.20220203">monaco-editor@0.32.0-dev.20220203</option>
+					<option value="monaco-editor@0.32.0-dev.20220202">monaco-editor@0.32.0-dev.20220202</option>
+					<option value="monaco-editor@0.32.0-dev.20220201">monaco-editor@0.32.0-dev.20220201</option>
+					<option value="monaco-editor@0.32.0-dev.20220131">monaco-editor@0.32.0-dev.20220131</option>
+					<option value="monaco-editor@0.32.0-dev.20220130">monaco-editor@0.32.0-dev.20220130</option>
+					<option value="monaco-editor@0.32.0-dev.20220129">monaco-editor@0.32.0-dev.20220129</option>
+					<option value="monaco-editor@0.32.0-dev.20220128">monaco-editor@0.32.0-dev.20220128</option>
+					<option value="monaco-editor@0.32.0-dev.20220126">monaco-editor@0.32.0-dev.20220126</option>
+					<option value="monaco-editor@0.32.0-dev.20220125">monaco-editor@0.32.0-dev.20220125</option>
+					<option value="monaco-editor@0.32.0-dev.20220124">monaco-editor@0.32.0-dev.20220124</option>
+					<option value="monaco-editor@0.32.0-dev.20220113">monaco-editor@0.32.0-dev.20220113</option>
+					<option value="monaco-editor@0.32.0-dev.20220112">monaco-editor@0.32.0-dev.20220112</option>
+					<option value="monaco-editor@0.32.0-dev.20220111">monaco-editor@0.32.0-dev.20220111</option>
+					<option value="monaco-editor@0.32.0-dev.20220110">monaco-editor@0.32.0-dev.20220110</option>
+					<option value="monaco-editor@0.32.0-dev.20220106">monaco-editor@0.32.0-dev.20220106</option>
+					<option value="monaco-editor@0.32.0-dev.20220105">monaco-editor@0.32.0-dev.20220105</option>
+					<option value="monaco-editor@0.32.0-dev.20220104">monaco-editor@0.32.0-dev.20220104</option>
+					<option value="monaco-editor@0.32.0-dev.20220103">monaco-editor@0.32.0-dev.20220103</option>
+					<option value="monaco-editor@0.32.0-dev.20220102">monaco-editor@0.32.0-dev.20220102</option>
+					<option value="monaco-editor@0.32.0-dev.20220101">monaco-editor@0.32.0-dev.20220101</option>
+					<option value="monaco-editor@0.32.0-dev.20211231">monaco-editor@0.32.0-dev.20211231</option>
+					<option value="monaco-editor@0.32.0-dev.20211230">monaco-editor@0.32.0-dev.20211230</option>
+					<option value="monaco-editor@0.32.0-dev.20211229">monaco-editor@0.32.0-dev.20211229</option>
+					<option value="monaco-editor@0.32.0-dev.20211223">monaco-editor@0.32.0-dev.20211223</option>
+					<option value="monaco-editor@0.32.0-dev.20211222">monaco-editor@0.32.0-dev.20211222</option>
+					<option value="monaco-editor@0.32.0-dev.20211221">monaco-editor@0.32.0-dev.20211221</option>
+					<option value="monaco-editor@0.32.0-dev.20211220">monaco-editor@0.32.0-dev.20211220</option>
+					<option value="monaco-editor@0.32.0-dev.20211219">monaco-editor@0.32.0-dev.20211219</option>
+					<option value="monaco-editor@0.32.0-dev.20211218">monaco-editor@0.32.0-dev.20211218</option>
+					<option value="monaco-editor@0.32.0-dev.20211217">monaco-editor@0.32.0-dev.20211217</option>
+					<option value="monaco-editor@0.32.0-dev.20211216">monaco-editor@0.32.0-dev.20211216</option>
+					<option value="monaco-editor@0.32.0-dev.20211215">monaco-editor@0.32.0-dev.20211215</option>
+					<option value="monaco-editor@0.32.0-dev.20211214">monaco-editor@0.32.0-dev.20211214</option>
+					<option value="monaco-editor@0.32.0-dev.20211213">monaco-editor@0.32.0-dev.20211213</option>
+					<option value="monaco-editor@0.32.0-dev.20211212">monaco-editor@0.32.0-dev.20211212</option>
+					<option value="monaco-editor@0.32.0-dev.20211211">monaco-editor@0.32.0-dev.20211211</option>
+					<option value="monaco-editor@0.31.1">monaco-editor@0.31.1</option>
+					<option value="monaco-editor@0.31.0">monaco-editor@0.31.0</option>
+					<option value="monaco-editor@0.31.0-dev.20211210">monaco-editor@0.31.0-dev.20211210</option>
+					<option value="monaco-editor@0.31.0-dev.20211209">monaco-editor@0.31.0-dev.20211209</option>
+					<option value="monaco-editor@0.31.0-dev.20211208">monaco-editor@0.31.0-dev.20211208</option>
+					<option value="monaco-editor@0.31.0-dev.20211207">monaco-editor@0.31.0-dev.20211207</option>
+					<option value="monaco-editor@0.31.0-dev.20211206">monaco-editor@0.31.0-dev.20211206</option>
+					<option value="monaco-editor@0.31.0-dev.20211205">monaco-editor@0.31.0-dev.20211205</option>
+					<option value="monaco-editor@0.31.0-dev.20211204">monaco-editor@0.31.0-dev.20211204</option>
+					<option value="monaco-editor@0.31.0-dev.20211203">monaco-editor@0.31.0-dev.20211203</option>
+					<option value="monaco-editor@0.31.0-dev.20211202">monaco-editor@0.31.0-dev.20211202</option>
+					<option value="monaco-editor@0.31.0-dev.20211201">monaco-editor@0.31.0-dev.20211201</option>
+					<option value="monaco-editor@0.31.0-dev.20211130">monaco-editor@0.31.0-dev.20211130</option>
+					<option value="monaco-editor@0.31.0-dev.20211129">monaco-editor@0.31.0-dev.20211129</option>
+					<option value="monaco-editor@0.31.0-dev.20211128">monaco-editor@0.31.0-dev.20211128</option>
+					<option value="monaco-editor@0.31.0-dev.20211127">monaco-editor@0.31.0-dev.20211127</option>
+					<option value="monaco-editor@0.31.0-dev.20211126">monaco-editor@0.31.0-dev.20211126</option>
+					<option value="monaco-editor@0.31.0-dev.20211125">monaco-editor@0.31.0-dev.20211125</option>
+					<option value="monaco-editor@0.31.0-dev.20211124">monaco-editor@0.31.0-dev.20211124</option>
+					<option value="monaco-editor@0.31.0-dev.20211123">monaco-editor@0.31.0-dev.20211123</option>
+					<option value="monaco-editor@0.30.1">monaco-editor@0.30.1</option>
+					<option value="monaco-editor@0.30.0">monaco-editor@0.30.0</option>
+					<option value="monaco-editor@0.29.1">monaco-editor@0.29.1</option>
+					<option value="monaco-editor@0.29.0">monaco-editor@0.29.0</option>
+					<option value="monaco-editor@0.28.1">monaco-editor@0.28.1</option>
+					<option value="monaco-editor@0.28.0">monaco-editor@0.28.0</option>
+					<option value="monaco-editor@0.27.0">monaco-editor@0.27.0</option>
+					<option value="monaco-editor@0.26.1">monaco-editor@0.26.1</option>
+					<option value="monaco-editor@0.26.0">monaco-editor@0.26.0</option>
+					<option value="monaco-editor@0.25.2">monaco-editor@0.25.2</option>
+					<option value="monaco-editor@0.25.1">monaco-editor@0.25.1</option>
+					<option value="monaco-editor@0.25.0">monaco-editor@0.25.0</option>
+					<option value="monaco-editor@0.24.0">monaco-editor@0.24.0</option>
+					<option value="monaco-editor@0.23.0">monaco-editor@0.23.0</option>
+					<option value="monaco-editor@0.22.3">monaco-editor@0.22.3</option>
+					<option value="monaco-editor@0.22.2">monaco-editor@0.22.2</option>
+					<option value="monaco-editor@0.22.1">monaco-editor@0.22.1</option>
+					<option value="monaco-editor@0.22.0">monaco-editor@0.22.0</option>
+					<option value="monaco-editor@0.21.3">monaco-editor@0.21.3</option>
+					<option value="monaco-editor@0.21.2">monaco-editor@0.21.2</option>
+					<option value="monaco-editor@0.21.1">monaco-editor@0.21.1</option>
+					<option value="monaco-editor@0.21.0">monaco-editor@0.21.0</option>
+					<option value="monaco-editor@0.20.0">monaco-editor@0.20.0</option>
+					<option value="monaco-editor@0.19.3">monaco-editor@0.19.3</option>
+					<option value="monaco-editor@0.19.2">monaco-editor@0.19.2</option>
+					<option value="monaco-editor@0.19.1">monaco-editor@0.19.1</option>
+					<option value="monaco-editor@0.19.0">monaco-editor@0.19.0</option>
+					<option value="monaco-editor@0.18.1">monaco-editor@0.18.1</option>
+					<option value="monaco-editor@0.18.0">monaco-editor@0.18.0</option>
+					<option value="monaco-editor@0.17.1">monaco-editor@0.17.1</option>
+					<option value="monaco-editor@0.17.0">monaco-editor@0.17.0</option>
+					<option value="monaco-editor@0.16.2">monaco-editor@0.16.2</option>
+					<option value="monaco-editor@0.16.1">monaco-editor@0.16.1</option>
+					<option value="monaco-editor@0.16.0">monaco-editor@0.16.0</option>
+					<option value="monaco-editor@0.15.6">monaco-editor@0.15.6</option>
+					<option value="monaco-editor@0.15.5">monaco-editor@0.15.5</option>
+					<option value="monaco-editor@0.15.4">monaco-editor@0.15.4</option>
+					<option value="monaco-editor@0.15.3">monaco-editor@0.15.3</option>
+					<option value="monaco-editor@0.15.2">monaco-editor@0.15.2</option>
+					<option value="monaco-editor@0.15.1">monaco-editor@0.15.1</option>
+					<option value="monaco-editor@0.15.0">monaco-editor@0.15.0</option>
+					<option value="monaco-editor@0.14.3">monaco-editor@0.14.3</option>
+					<option value="monaco-editor@0.14.2">monaco-editor@0.14.2</option>
+					<option value="monaco-editor@0.14.1">monaco-editor@0.14.1</option>
+					<option value="monaco-editor@0.14.0">monaco-editor@0.14.0</option>
+					<option value="monaco-editor@0.13.1">monaco-editor@0.13.1</option>
+					<option value="monaco-editor@0.13.0">monaco-editor@0.13.0</option>
+					<option value="monaco-editor@0.12.0">monaco-editor@0.12.0</option>
+					<option value="monaco-editor@0.11.1">monaco-editor@0.11.1</option>
+					<option value="monaco-editor@0.11.0">monaco-editor@0.11.0</option>
+					<option value="monaco-editor@0.10.1">monaco-editor@0.10.1</option>
+					<option value="monaco-editor@0.10.0">monaco-editor@0.10.0</option>
+					<option value="monaco-editor@0.9.0">monaco-editor@0.9.0</option>
+					<option value="monaco-editor@0.8.3">monaco-editor@0.8.3</option>
+					<option value="monaco-editor@0.8.2">monaco-editor@0.8.2</option>
+					<option value="monaco-editor@0.8.1">monaco-editor@0.8.1</option>
+					<option value="monaco-editor@0.8.0">monaco-editor@0.8.0</option>
+					<option value="monaco-editor@0.7.0">monaco-editor@0.7.0</option>
+					<option value="monaco-editor@0.6.1">monaco-editor@0.6.1</option>
+					<option value="monaco-editor@0.6.0">monaco-editor@0.6.0</option>
+					<option value="monaco-editor@0.5.3">monaco-editor@0.5.3</option>
+					<option value="monaco-editor@0.5.1">monaco-editor@0.5.1</option>
+					<option value="monaco-editor@0.5.0">monaco-editor@0.5.0</option>
+					<option value="monaco-editor@0.4.0">monaco-editor@0.4.0</option>
+					<option value="monaco-editor@0.3.1">monaco-editor@0.3.1</option>
+					<option value="monaco-editor@0.2.4">monaco-editor@0.2.4</option>
+					<option value="monaco-editor@0.2.3">monaco-editor@0.2.3</option>
+					<option value="monaco-editor@0.0.1">monaco-editor@0.0.1</option>
+				</select>
+			</div>
+
+			<div class="listing">
+				<table>
+					<tbody>
+					<tr>
+						<td class="name level-up" colspan="2"><a href="../">...</a></td>
+					</tr>
+
+					<tr>
+						<td class="name">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4C4 2.89543 4.89543 2 6 2H11L16 7V16C16 17.1046 15.1046 18 14 18H6C4.89543 18 4 17.1046 4 16V4Z" stroke="#5C667A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<a rel="nofollow" href="/npm/monaco-editor@0.45.0/min/vs/basic-languages/cpp/cpp.js">cpp.js</a>
+						</td>
+						<td class="size">6.15 KB</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="landing">
+				<p class="left">Free Open Source CDN for <strong>monaco-editor</strong></p>
+
+				<p class="right">
+					Looking for a nice landing page for your package?
+					<a href="https://www.jsdelivr.com/package/npm/monaco-editor">https://www.jsdelivr.com/package/npm/monaco-editor</a>
+				</p>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-left">
+				<svg class="logo" viewBox="0 0 140 34" xmlns="http://www.w3.org/2000/svg">
+					<g fill="#1e3b45">
+						<path
+							d="m43.616 19.576c0 4.005-1.389 6.008-4.168 6.008-.432 0-.853-.059-1.261-.174v-1.112c.455.154.883.232 1.285.232 1.065 0 1.833-.404 2.304-1.209.471-.807.706-2.063.706-3.769v-10.859h1.134z"/>
+						<path
+							d="m47.065 24.705v-1.309c1.188.756 2.393 1.135 3.612 1.135 1.296 0 2.28-.268 2.952-.805.671-.537 1.007-1.288 1.007-2.251 0-.85-.226-1.528-.678-2.032-.451-.506-1.429-1.194-2.935-2.067-1.682-.979-2.747-1.799-3.195-2.46-.447-.66-.671-1.422-.671-2.286 0-1.172.455-2.169 1.366-2.988.911-.817 2.126-1.227 3.647-1.227.988 0 1.975.166 2.963.498v1.204c-.972-.44-2.011-.66-3.113-.66-1.127 0-2.02.287-2.681.858-.659.571-.99 1.297-.99 2.177 0 .848.226 1.524.677 2.026.452.5 1.426 1.184 2.923 2.048 1.551.881 2.584 1.663 3.097 2.345.514.684.77 1.469.77 2.356 0 1.274-.442 2.311-1.325 3.114-.884.803-2.133 1.204-3.746 1.204-.572 0-1.229-.09-1.973-.266-.745-.178-1.313-.383-1.707-.614z"/>
+						<path
+							d="m59.104 25.295v-16.602h5.881c5.895 0 8.844 2.698 8.844 8.093 0 2.585-.805 4.65-2.413 6.194-1.61 1.543-3.753 2.315-6.431 2.315zm3.74-13.556v10.522h1.852c1.621 0 2.892-.485 3.814-1.458s1.383-2.296 1.383-3.97c0-1.583-.457-2.827-1.372-3.734-.914-.907-2.199-1.36-3.85-1.36z"/>
+						<path
+							d="m86.841 25.295h-9.957v-16.602h9.574v3.046h-5.834v3.693h5.43v3.032h-5.43v3.796h6.217z"/>
+						<path d="m99.893 25.295h-9.887v-16.602h3.74v13.568h6.147z"/>
+						<path d="m105.989 8.693v16.602h-3.74v-16.602z"/>
+						<path
+							d="m123.834 8.693-5.719 16.602h-4.236l-5.651-16.602h4.029l3.462 11.553c.186.625.297 1.178.336 1.657h.068c.055-.518.174-1.084.36-1.702l3.439-11.508z"/>
+						<path
+							d="m140 25.295h-4.295l-2.581-4.273c-.193-.322-.379-.613-.555-.868-.178-.254-.358-.473-.539-.654-.182-.18-.369-.321-.567-.416-.197-.096-.41-.145-.643-.145h-1.006v6.356h-3.74v-16.602h5.926c4.029 0 6.043 1.506 6.043 4.515 0 .578-.088 1.114-.266 1.604s-.428.932-.752 1.325c-.324.395-.717.733-1.176 1.02-.459.285-.969.508-1.534.67v.047c.248.076.486.203.719.375.231.174.455.377.67.61.217.231.424.479.619.746.197.266.377.526.539.782zm-10.185-13.8v4.619h1.62c.803 0 1.448-.231 1.932-.694.494-.471.742-1.053.742-1.749 0-1.45-.87-2.177-2.605-2.177h-1.689z"/>
+					</g>
+					<path d="m15.386.338-3.106 11.038v.104 11.039l3.106 11.143 3.194-11.143v-11.039-.104z"
+						  fill="#bd483b"/>
+					<path d="m15.386.338-15.386 5.542 2.186 20.492 13.2 7.29" fill="#e64e3d"/>
+					<path d="m15.386 33.662 13.268-7.365 2.483-20.49-15.751-5.469" fill="#bd483b"/>
+					<path
+						d="m12.594 25.088c-1.514-.473-2.864-1.317-3.94-2.431l-.003-.002c-.131-.137-.257-.274-.381-.418-.838-.979-1.478-2.13-1.857-3.396.251.233.518.447.796.647.003.008.008.016.011.027-.003-.012-.008-.02-.011-.027.398.279.822.526 1.269.737.141.064.282.125.427.186.177.07.36.135.542.195.011.006.024.006.035.01.032.012.065.023.097.033.074.756.649 1.372 1.39 1.504.287 1.157.833 2.146 1.625 2.935z"
+						fill="#fec82f"/>
+					<path
+						d="m13.174 11.794c0 .324.088.627.243.883-1.25 1.753-2.108 3.656-2.479 5.539-.041.209-.077.416-.105.619-.429.113-.79.393-1.016.762-.013 0-.024-.004-.035-.01-.023-.006-.04-.014-.061-.021-.142-.045-.281-.098-.417-.152-.204-.08-.403-.174-.598-.272-.663-.338-1.26-.772-1.781-1.291-.11-.111-.213-.219-.311-.332l-.041-.049c-.038-.045-.078-.092-.115-.137-.017-.021-.032-.039-.047-.059-.014-.018-.024-.031-.037-.045-.005-.01-.013-.016-.017-.023-.02-.022-.037-.047-.053-.068-.008-.012-.017-.022-.023-.029-.001-.004-.002-.004-.004-.008-.013-.014-.024-.033-.037-.049-.055-.072-.107-.149-.157-.225-.009-.012-.019-.024-.025-.039-.006-.006-.015-.018-.02-.027-.014-.203-.02-.408-.02-.617 0-1.882.557-3.636 1.512-5.105.113-.176.235-.348.361-.514.12-.16.245-.319.374-.467 1.126-1.317 2.61-2.315 4.299-2.847.026.182.059.367.095.553.192.967.513 1.942.949 2.898-.271.3-.434.698-.434 1.132z"
+						fill="#fec82f"/>
+					<path
+						d="m12.176 20.479c0 .221-.079.424-.212.58-.029.037-.061.068-.096.1-.161.141-.368.225-.596.225-.173 0-.335-.049-.472-.135-.147-.09-.265-.219-.342-.375-.058-.121-.089-.252-.089-.395 0-.26.11-.494.286-.658.029-.027.06-.051.091-.074.148-.107.331-.17.526-.17.206 0 .395.068.546.186.085.063.155.139.213.229.094.137.145.307.145.487z"
+						fill="#fec82f"/>
+					<path
+						d="m15.777 11.794c0 .147-.032.281-.094.403-.148.299-.456.502-.808.502-.044 0-.087-.002-.128-.006-.008-.004-.016-.004-.025-.006-.383-.066-.684-.369-.741-.756-.007-.043-.01-.09-.01-.137 0-.102.017-.201.05-.295.123-.354.46-.606.854-.606h.002.036c.392.018.72.285.827.645.025.082.037.168.037.256z"
+						fill="#fec82f"/>
+					<path
+						d="m24.752 16.143c0 .907-.129 1.782-.368 2.61-.799-.211-1.606-.52-2.4-.914.022-.109.033-.221.033-.336 0-.225-.044-.442-.125-.639.031-.029.064-.061.095-.094.957-.977 1.763-2.055 2.404-3.212.234.821.361 1.69.361 2.585z"
+						fill="#df9c26"/>
+					<path
+						d="m23.881 12.196c-.063.139-.131.277-.201.416-.627 1.235-1.455 2.382-2.459 3.407-.009.01-.02.02-.028.027-.255-.156-.557-.244-.879-.244-.375 0-.722.123-1.004.328-.514-.404-1.011-.848-1.49-1.327-.608-.604-1.157-1.247-1.647-1.909.252-.297.405-.68.405-1.102 0-.313-.087-.61-.237-.862 1.21-1.163 2.547-2.106 3.917-2.788 1.572.961 2.841 2.372 3.623 4.054z"
+						fill="#df9c26"/>
+					<path
+						d="m21.217 17.503c0 .379-.23.701-.556.836-.108.045-.225.07-.348.07-.063 0-.125-.008-.185-.02-.385-.082-.681-.408-.715-.805.011-.01.021-.016.028-.022-.01-.008-.021-.014-.03-.023-.001-.012-.001-.022-.001-.037 0-.389.25-.723.601-.85.095-.033.196-.053.302-.053.09 0 .179.014.262.039.346.105.606.412.64.785.002.027.002.055.002.08z"
+						fill="#df9c26"/>
+					<path
+						d="m21.452 18.767c-.301.274-.7.44-1.139.44-.351 0-.677-.107-.949-.289-.039.025-.078.051-.115.072-1.233.781-2.538 1.352-3.864 1.698v4.824c3.887 0 7.222-2.37 8.64-5.744-.859-.237-1.723-.573-2.573-1.001z"
+						fill="#df9c26"/>
+					<path
+						d="m15.386 20.688c-.793.205-1.591.33-2.385.367-.042.002-.086.006-.128.008-.151.41-.454.744-.839.94.245.909.688 1.698 1.319 2.327.524.524 1.162.92 1.891 1.18.046 0 .093.002.142.002z"
+						fill="#fec82f"/>
+					<path
+						d="m18.612 17.503c0-.172.026-.34.074-.498-.562-.44-1.106-.92-1.625-1.442-.614-.614-1.172-1.262-1.675-1.934v5.946c1.124-.324 2.235-.823 3.291-1.489.009-.006.02-.014.03-.022-.061-.174-.095-.364-.095-.561z"
+						fill="#df9c26"/>
+					<path
+						d="m15.386 13.629c-.045-.059-.091-.113-.132-.174-.123.029-.249.043-.378.043-.227 0-.441-.045-.637-.123-1.134 1.606-1.912 3.341-2.25 5.049-.032.162-.059.32-.083.475.477.195.848.596.996 1.092.016-.004.029-.004.046-.004.809-.039 1.627-.18 2.438-.412z"
+						fill="#fec82f"/>
+					<path
+						d="m15.386 6.778v3.394c.048.016.098.033.145.055 1.106-1.073 2.316-1.979 3.573-2.681-1.14-.496-2.399-.768-3.718-.768z"
+						fill="#df9c26"/>
+					<path
+						d="m15.386 6.778c-.608 0-1.201.055-1.773.168.025.197.06.404.101.606.168.86.449 1.725.829 2.575.106-.02.219-.033.333-.033.178 0 .347.027.51.078z"
+						fill="#fec82f"/>
+				</svg>
+
+				<p class="copyright">&copy; jsdelivr.com, 2012 - 2026</p>
+			</div>
+
+			<div class="footer-right">
+				<a href="https://github.com/jsdelivr/jsdelivr">
+					<span class="gh-icon">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="0 0 16 16" xml:space="preserve">
+						<path id="XMLID_1_" fill="#ff5627" d="M8,0.2c-4.4,0-8,3.6-8,8c0,3.5,2.3,6.5,5.5,7.6C5.9,15.9,6,15.6,6,15.4c0-0.2,0-0.7,0-1.4
+							C3.8,14.5,3.3,13,3.3,13c-0.4-0.9-0.9-1.2-0.9-1.2c-0.7-0.5,0.1-0.5,0.1-0.5c0.8,0.1,1.2,0.8,1.2,0.8C4.4,13.4,5.6,13,6,12.8
+							c0.1-0.5,0.3-0.9,0.5-1.1c-1.8-0.2-3.6-0.9-3.6-4c0-0.9,0.3-1.6,0.8-2.1c-0.1-0.2-0.4-1,0.1-2.1c0,0,0.7-0.2,2.2,0.8
+							c0.6-0.2,1.3-0.3,2-0.3c0.7,0,1.4,0.1,2,0.3c1.5-1,2.2-0.8,2.2-0.8c0.4,1.1,0.2,1.9,0.1,2.1c0.5,0.6,0.8,1.3,0.8,2.1
+							c0,3.1-1.9,3.7-3.7,3.9C9.7,12,10,12.5,10,13.2c0,1.1,0,1.9,0,2.2c0,0.2,0.1,0.5,0.6,0.4c3.2-1.1,5.5-4.1,5.5-7.6
+							C16,3.8,12.4,0.2,8,0.2z"/>
+						</svg>
+					</span>
+					Documentation
+				</a>
+
+				<a href="https://www.jsdelivr.com/features">Learn more about jsDelivr</a>
+			</div>
+		</footer>
+
+		<script>
+			var versions = document.querySelector('.versions');
+
+			[].slice.call(versions.querySelectorAll('option')).forEach(function(option) {
+				if (option.value === 'monaco-editor@0.45.0') {
+					option.selected = true;
+				}
+			});
+
+			versions.addEventListener('change', function() {
+				location.pathname = '/npm/' + this.value + '/min/vs/basic-languages/cpp/';
+			});
+		</script>
+	</body>
+</html>

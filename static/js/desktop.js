@@ -7,12 +7,12 @@ let isMobileMode = false;
 let monacoEditorInstances = new Map();
 
 // 初始化Monaco Editor
-require.config({ paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs' }});
+require.config({ paths: { 'vs': '/static/lib/monaco/vs' }});
 window.MonacoEnvironment = {
     getWorkerUrl: function (workerId, label) {
         return `data:text/javascript;charset=utf-8,${encodeURIComponent(`
-            self.MonacoEnvironment = { baseUrl: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/' };
-            importScripts('https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js');
+            self.MonacoEnvironment = { baseUrl: '/static/lib/monaco/' };
+            importScripts('/static/lib/monaco/vs/base/worker/workerMain.js');
         `)}`;
     }
 };
